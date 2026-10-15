@@ -1,0 +1,67 @@
+/* ==========================================================================
+   RKris Academy — breakpoints (mobile-first enhancements)
+   360 / 768 / 1024 / 1440
+   ========================================================================== */
+
+@media (min-width: 576px) {
+  .quick-strip__grid { grid-template-columns: repeat(3, 1fr); }
+  .icon-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { columns: 2; }
+  .form__row--2 { grid-template-columns: 1fr 1fr; }
+  .video-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 768px) {
+  .grid--2,
+  .grid--3,
+  .grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .split { grid-template-columns: 1fr 1fr; }
+  .facts { grid-template-columns: repeat(4, 1fr); }
+  .quick-strip__grid { grid-template-columns: repeat(6, 1fr); }
+  .footer__grid { grid-template-columns: 1.3fr 1fr 1fr; }
+  .slider,
+  .slider__slide,
+  .slider__content { min-height: 520px; }
+  .stepper { grid-template-columns: repeat(2, 1fr); }
+  .calendar { grid-template-columns: 1.4fr 1fr; }
+  .layout-with-nav { grid-template-columns: 220px 1fr; }
+  .gallery-grid { columns: 3; }
+  .form__row--3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .grid--3 { grid-template-columns: repeat(3, 1fr); }
+  .grid--4 { grid-template-columns: repeat(4, 1fr); }
+  .icon-grid { grid-template-columns: repeat(3, 1fr); }
+  .footer__grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; }
+  .slider,
+  .slider__slide,
+  .slider__content { min-height: 580px; }
+  .stepper { grid-template-columns: repeat(3, 1fr); }
+  .header__cta { display: inline-flex; }
+}
+
+/* Desktop navigation — hamburger below 1280px because of menu density */
+@media (min-width: 1280px) {
+  .nav-toggle { display: none; }
+  .nav__list { display: flex; }
+  .mobile-bar { display: none; }
+  .float-stack { bottom: 1.25rem; }
+  body { padding-bottom: 0; }
+}
+
+@media (max-width: 1279.98px) {
+  body { padding-bottom: 4.25rem; }
+  .header__inner { min-height: 108px; }
+  .logo img { height: 92px; max-width: 210px; }
+  .nav__list { display: none; }
+}
+
+@media (min-width: 1440px) {
+  :root { --container: 1240px; }
+}
+
+@media (max-width: 359.98px) {
+  .container { width: min(100% - 1.25rem, var(--container)); }
+  .logo__tag { display: none; }
+}

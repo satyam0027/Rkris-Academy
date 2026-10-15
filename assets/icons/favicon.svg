@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="RKris Academy">
+  <rect width="64" height="64" rx="12" fill="#0B3D6E"/>
+  <path d="M12 8h40v6H12z" fill="#E08A1E"/>
+  <text x="32" y="42" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#FFFFFF">RK</text>
+  <path d="M12 50h40v6H12z" fill="#E08A1E"/>
+</svg>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- SEO -->
+  <title>Mandatory Public Disclosure | RKris Academy</title>
+  <meta name="description" content="CBSE mandatory public disclosure for RKris Academy: general information, documents, results, teaching staff and school infrastructure as per CBSE norms.">
+  <link rel="canonical" href="/mandatory-disclosure.html">
+  <meta property="og:title" content="Mandatory Public Disclosure | RKris Academy">
+  <meta property="og:description" content="Public disclosure of affiliation, documents, results, staff and infrastructure as per CBSE norms.">
+  <meta property="og:image" content="https://placehold.co/1200x630/0b3d6e/ffffff?text=Mandatory+Disclosure">
+  <link rel="icon" href="assets/icons/logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="disclosure">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <!-- Page banner — same pattern as other inner pages -->
+    <section class="page-banner">
+      <div class="container">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Mandatory Public Disclosure</li>
+          </ol>
+        </nav>
+        <h1>Mandatory Public Disclosure</h1>
+        <p>As per CBSE norms, the following information is disclosed for the public.</p>
+        <p>Last updated: <time id="mpd-last-updated">—</time></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p>Values and PDF paths are stored in <code>data/disclosure.js</code>. Empty PDF paths display as “To be uploaded”.</p>
+
+        <!-- Five CBSE Appendix-IX sections as accessible accordions -->
+        <div class="accordion">
+
+          <!-- A. General Information -->
+          <div class="accordion__item">
+            <button class="accordion__btn" type="button" aria-expanded="true" aria-controls="mpd-panel-a" id="mpd-tab-a">
+              A. General Information <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="accordion__panel" id="mpd-panel-a" role="region" aria-labelledby="mpd-tab-a">
+              <div class="table-wrap">
+                <table class="data-table">
+                  <caption class="sr-only">General information about the school</caption>
+                  <thead>
+                    <tr><th>Particulars</th><th>Details</th></tr>
+                  </thead>
+                  <tbody id="mpd-general-body"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- B. Documents and Information -->
+          <div class="accordion__item">
+            <button class="accordion__btn" type="button" aria-expanded="false" aria-controls="mpd-panel-b" id="mpd-tab-b">
+              B. Documents and Information <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="accordion__panel" id="mpd-panel-b" role="region" aria-labelledby="mpd-tab-b">
+              <div class="table-wrap">
+                <table class="data-table">
+                  <caption class="sr-only">Statutory documents available for download</caption>
+                  <thead>
+                    <tr>
+                      <th>Sr. No.</th>
+                      <th>Document</th>
+                      <th>View</th>
+                    </tr>
+                  </thead>
+                  <tbody id="mpd-documents-body"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- C. Results and Academics -->
+          <div class="accordion__item">
+            <button class="accordion__btn" type="button" aria-expanded="false" aria-controls="mpd-panel-c" id="mpd-tab-c">
+              C. Results and Academics <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="accordion__panel" id="mpd-panel-c" role="region" aria-labelledby="mpd-tab-c">
+              <h3>Documents</h3>
+              <div class="table-wrap">
+                <table class="data-table">
+                  <caption class="sr-only">Academic documents for download</caption>
+                  <thead>
+                    <tr>
+                      <th>Sr. No.</th>
+                      <th>Document</th>
+                      <th>View / Download</th>
+                    </tr>
+                  </thead>
+                  <tbody id="mpd-result-docs-body"></tbody>
+                </table>
+              </div>
+
+              <h3 class="stack-gap">Class 10 board exam results (last 3 years)</h3>
+              <div class="table-wrap">
+                <table class="data-table">
+                  <caption class="sr-only">Class 10 results for the last three years</caption>
+                  <thead>
+                    <tr>
+                      <th>Year</th>
+                      <th>Registered</th>
+                      <th>Passed</th>
+                      <th>Pass %</th>
+                      <th>PDF</th>
+                    </tr>
+                  </thead>
+                  <tbody id="mpd-class10-body"></tbody>
+                </table>
+              </div>
+
+              <h3 class="stack-gap">Class 12 board exam results (last 3 years)</h3>
+              <div class="table-wrap">
+                <table class="data-table">
+                  <caption class="sr-only">Class 12 results for the last three years</caption>
+                  <thead>
+                    <tr>
+                      <th>Year</th>
+                      <th>Registered</th>
+                      <th>Passed</th>
+                      <th>Pass %</th>
+                      <th>PDF</th>
+                    </tr>
+                  </thead>
+                  <tbody id="mpd-class12-body"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- D. Staff (Teaching) -->
+          <div class="accordion__item">
+            <button class="accordion__btn" type="button" aria-expanded="false" aria-controls="mpd-panel-d" id="mpd-tab-d">
+              D. Staff (Teaching) <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="accordion__panel" id="mpd-panel-d" role="region" aria-labelledby="mpd-tab-d">
+              <div class="table-wrap">
+                <table class="data-table">
+                  <caption class="sr-only">Teaching staff summary</caption>
+                  <thead>
+                    <tr><th>Information</th><th>Details</th></tr>
+                  </thead>
+                  <tbody id="mpd-staff-summary-body"></tbody>
+                </table>
+              </div>
+
+              <p class="stack-gap" id="mpd-staff-pdf"></p>
+
+              <h3 class="stack-gap">Staff details</h3>
+              <div class="table-wrap">
+                <table class="data-table">
+                  <caption class="sr-only">Name, designation, qualification and experience of teaching staff</caption>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Designation</th>
+                      <th>Qualification</th>
+                      <th>Experience</th>
+                    </tr>
+                  </thead>
+                  <tbody id="mpd-staff-directory-body"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- E. School Infrastructure -->
+          <div class="accordion__item">
+            <button class="accordion__btn" type="button" aria-expanded="false" aria-controls="mpd-panel-e" id="mpd-tab-e">
+              E. School Infrastructure <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="accordion__panel" id="mpd-panel-e" role="region" aria-labelledby="mpd-tab-e">
+              <div class="table-wrap">
+                <table class="data-table">
+                  <caption class="sr-only">Campus and infrastructure details</caption>
+                  <thead>
+                    <tr><th>Information</th><th>Details</th></tr>
+                  </thead>
+                  <tbody id="mpd-infra-body"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js" defer></script>
+  <script src="js/includes.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="data/disclosure.js" defer></script>
+  <script src="js/disclosure.js" defer></script>
+  <script src="js/forms.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faculty and Staff | RKris Academy</title>
+  <meta name="description" content="Meet the faculty of RKris Academy. Search and filter teachers by department, including pre-primary, primary, middle, secondary, administration, sports and arts.">
+  <link rel="canonical" href="faculty.html">
+  <meta property="og:title" content="Faculty and Staff | RKris Academy">
+  <meta property="og:description" content="Directory of teachers and staff at RKris Academy.">
+  <meta property="og:image" content="https://placehold.co/1200x630/0b3d6e/ffffff?text=Faculty">
+  <link rel="icon" href="assets/icons/logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="faculty">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+  <main id="main">
+    <section class="page-banner">
+      <div class="container">
+        <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="index.html">Home</a></li><li>Faculty</li></ol></nav>
+        <h1>Faculty and staff</h1>
+        <p>Placeholder directory — replace photos and profiles in <code>js/data.js</code>.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="search">
+          <label class="sr-only" for="faculty-search">Search faculty</label>
+          <input class="form__control" id="faculty-search" type="search" placeholder="Search by name, subject or designation">
+        </div>
+        <div class="filters" data-faculty-filters>
+          <button type="button" class="tabs__btn is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="tabs__btn" data-filter="pre-primary" aria-pressed="false">Pre-Primary</button>
+          <button type="button" class="tabs__btn" data-filter="primary" aria-pressed="false">Primary</button>
+          <button type="button" class="tabs__btn" data-filter="middle" aria-pressed="false">Middle</button>
+          <button type="button" class="tabs__btn" data-filter="secondary" aria-pressed="false">Secondary</button>
+          <button type="button" class="tabs__btn" data-filter="administration" aria-pressed="false">Administration</button>
+          <button type="button" class="tabs__btn" data-filter="sports-arts" aria-pressed="false">Sports and Arts</button>
+        </div>
+        <div class="grid grid--4" data-faculty-grid></div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/data.js" defer></script>
+  <script src="js/includes.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/forms.js" defer></script>
+</body>
+</html>

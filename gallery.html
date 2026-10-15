@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photo and Video Gallery | RKris Academy</title>
+  <meta name="description" content="Browse campus, events, sports, achievements and activity photographs from RKris Academy, plus video highlights and a virtual tour placeholder.">
+  <link rel="canonical" href="gallery.html">
+  <meta property="og:title" content="Gallery | RKris Academy">
+  <meta property="og:description" content="Photos and videos from campus life at RKris Academy.">
+  <meta property="og:image" content="assets/images/photo-assembly.jpg">
+  <link rel="icon" href="assets/icons/logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="gallery">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+  <main id="main">
+    <section class="page-banner">
+      <div class="container">
+        <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="index.html">Home</a></li><li>Gallery</li></ol></nav>
+        <h1>Gallery</h1>
+        <p>Placeholder images and video cards. Add YouTube IDs in <code>js/data.js</code> to embed real clips.</p>
+      </div>
+    </section>
+    <section class="section" data-tabs>
+      <div class="container">
+        <div class="tabs" role="tablist" aria-label="Gallery type">
+          <button class="tabs__btn is-active" role="tab" id="tab-photos" aria-selected="true" aria-controls="photos">Photos</button>
+          <button class="tabs__btn" role="tab" id="tab-videos" aria-selected="false" aria-controls="videos">Videos</button>
+        </div>
+
+        <div class="tab-panel is-active" role="tabpanel" id="photos" aria-labelledby="tab-photos">
+          <div class="filters" data-photo-filters>
+            <button type="button" class="tabs__btn is-active" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="tabs__btn" data-filter="campus" aria-pressed="false">Campus</button>
+            <button type="button" class="tabs__btn" data-filter="events" aria-pressed="false">Events</button>
+            <button type="button" class="tabs__btn" data-filter="sports" aria-pressed="false">Sports</button>
+            <button type="button" class="tabs__btn" data-filter="achievements" aria-pressed="false">Achievements</button>
+            <button type="button" class="tabs__btn" data-filter="activities" aria-pressed="false">Activities</button>
+          </div>
+          <div class="gallery-grid" data-photo-grid></div>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="videos" aria-labelledby="tab-videos">
+          <div class="video-grid" data-video-grid></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/data.js" defer></script>
+  <script src="js/includes.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+  <script src="js/forms.js" defer></script>
+</body>
+</html>

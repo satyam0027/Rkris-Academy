@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notice Board, News and Events Calendar | RKris Academy</title>
+  <meta name="description" content="Read school notices, news and events at RKris Academy. Filter by category and browse the interactive calendar for upcoming dates.">
+  <link rel="canonical" href="notice-board.html">
+  <meta property="og:title" content="Notice Board and Events | RKris Academy">
+  <meta property="og:description" content="Notices, news, recent events and an interactive school calendar.">
+  <meta property="og:image" content="https://placehold.co/1200x630/0b3d6e/ffffff?text=Notice+Board">
+  <link rel="icon" href="assets/icons/logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="notice">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+  <main id="main">
+    <section class="page-banner">
+      <div class="container">
+        <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="index.html">Home</a></li><li>Notice Board</li></ol></nav>
+        <h1>Notice board and events</h1>
+        <p>Items marked New were published in the last three weeks. Update notices and events in <code>js/data.js</code>.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Notice board</h2>
+        <div class="search">
+          <label class="sr-only" for="notice-search">Search notices</label>
+          <input class="form__control" id="notice-search" type="search" placeholder="Search notices">
+        </div>
+        <div class="filters" data-notice-filters>
+          <button type="button" class="tabs__btn is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="tabs__btn" data-filter="notice" aria-pressed="false">Notice</button>
+          <button type="button" class="tabs__btn" data-filter="news" aria-pressed="false">News</button>
+          <button type="button" class="tabs__btn" data-filter="event" aria-pressed="false">Event</button>
+        </div>
+        <div class="grid grid--2" data-notice-list></div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <h2>Recent events</h2>
+        <div class="grid grid--3" data-recent-events-page></div>
+        <h3 class="stack-gap">Upcoming events</h3>
+        <ul class="list-block list-block--stack" data-upcoming-list></ul>
+      </div>
+    </section>
+
+    <section class="section" id="calendar">
+      <div class="container">
+        <h2>Events calendar</h2>
+        <div class="calendar" data-calendar>
+          <div class="calendar__month-wrap">
+            <div class="calendar__head">
+              <button type="button" class="btn btn--outline btn--sm" data-cal-prev aria-label="Previous month"><i class="fa-solid fa-chevron-left"></i></button>
+              <h3 data-cal-title>Month</h3>
+              <button type="button" class="btn btn--outline btn--sm" data-cal-next aria-label="Next month"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <div class="calendar__grid" data-cal-grid></div>
+          </div>
+          <aside class="calendar__panel" data-cal-panel></aside>
+          <div class="calendar__list-wrap" hidden>
+            <h3>This month (list)</h3>
+            <ul class="list-block list-block--stack" data-cal-list></ul>
+          </div>
+          <p><button type="button" class="btn btn--outline btn--sm" data-cal-toggle>List view</button></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/data.js" defer></script>
+  <script src="js/includes.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/calendar.js" defer></script>
+  <script src="js/forms.js" defer></script>
+</body>
+</html>

@@ -266,16 +266,33 @@
   }
 
   function initAccordion() {
-    qsa('.accordion__btn').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        const group = btn.closest('.accordion');
-        qsa('.accordion__btn', group).forEach(function (other) {
-          other.setAttribute('aria-expanded', 'false');
+    qsa('.accordion').forEach(function (group) {
+      qsa('.accordion__btn', group).forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          qsa('.accordion__btn', group).forEach(function (other) {
+            other.setAttribute('aria-expanded', 'false');
+          });
+          btn.setAttribute('aria-expanded', String(!expanded));
+          if (!expanded && document.body.dataset.page === 'statements') {
+            const id = btn.getAttribute('aria-controls');
+            if (id) history.replaceState(null, '', '#' + id);
+          }
         });
-        btn.setAttribute('aria-expanded', String(!expanded));
       });
     });
+    const hash = location.hash.replace('#', '');
+    if (hash) {
+      const targetBtn = qs('.accordion__btn[aria-controls="' + hash + '"]');
+      if (targetBtn) {
+        const group = targetBtn.closest('.accordion');
+        qsa('.accordion__btn', group).forEach(function (other) {
+          other.setAttribute('aria-expanded', String(other === targetBtn));
+        });
+        const panel = qs('#' + hash);
+        if (panel) panel.scrollIntoView({ block: 'start' });
+      }
+    }
   }
 
   function initTabs() {

@@ -185,7 +185,7 @@
         <li><a href="notice-board.html">Notice Board</a></li>
         <li><a href="circulars.html">Circulars</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="/mandatory-disclosure.html">Mandatory Public Disclosure</a></li>
+        <li><a href="mandatory-disclosure.html">Mandatory Public Disclosure</a></li>
       </ul>
     </div>
     <div>
@@ -195,7 +195,7 @@
         <li><a href="admissions.html#fees">Fee Structure</a></li>
         <li><a href="admissions.html#enquiry">Enquiry Form</a></li>
         <li><a href="assets/docs/prospectus.pdf" download>Prospectus</a></li>
-        <li><a href="/mandatory-disclosure.html">Mandatory Public Disclosure</a></li>
+        <li><a href="mandatory-disclosure.html">Mandatory Public Disclosure</a></li>
       </ul>
     </div>
     <div>
@@ -204,9 +204,19 @@
       <p class="footer__map"><a class="btn btn--outline" href="https://www.google.com/maps/search/?api=1&query=Knowledge+Park+India" data-bind-href="mapDirections" target="_blank" rel="noopener">View Map</a></p>
     </div>
   </div>
+  <nav class="container footer__statements" aria-label="Important statements">
+    <h3>Important Statements</h3>
+    <ul>
+      <li><a href="important-statements.html#copyright"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Copyright Statement</a></li>
+      <li><a href="important-statements.html#hyperlinking"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Hyperlinking Policy</a></li>
+      <li><a href="important-statements.html#terms"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Terms &amp; Condition</a></li>
+      <li><a href="important-statements.html#privacy"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Privacy Policy</a></li>
+      <li><a href="important-statements.html#disclaimer"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Disclaimer</a></li>
+    </ul>
+  </nav>
   <div class="container footer__meta">
     <p>Affiliated to <span data-bind="affiliationBoard">CBSE</span> / Affiliation No. <span data-bind="affiliationNo">XXXXXXX</span></p>
-    <p>&copy; <span id="year"></span> RKris Academy. All rights reserved. <a href="/mandatory-disclosure.html">Mandatory Public Disclosure</a></p>
+    <p>&copy; <span id="year"></span> RKris Academy. All rights reserved. <a href="mandatory-disclosure.html">Mandatory Public Disclosure</a></p>
   </div>
 </footer>
 <div class="float-stack">

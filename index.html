@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RKris Academy | CBSE School | Admissions 2026-27</title>
-  <meta name="description" content="RKris Academy is a CBSE school offering academics, sport, arts and values-based education. Admissions for 2026-27 are open from Nursery to Class XII.">
+  <title>RKris Academy | Awadhpur, Gorakhpur | Admissions 2026-27</title>
+  <meta name="description" content="RKris Academy in Awadhpur, Gorakhpur. Admissions for 2026-27 are open from Nursery to Class VIII.">
   <meta name="theme-color" content="#0b3d6e">
   <link rel="canonical" href="index.html">
   <meta property="og:type" content="website">
@@ -24,15 +24,15 @@
     "@context": "https://schema.org",
     "@type": "School",
     "name": "RKris Academy",
-    "url": "index.html",
-    "telephone": "+91-98765-43210",
-    "email": "info@rkrisacademy.edu.in",
+    "url": "https://www.rkrisacademy.edu.in",
+    "telephone": "+91-80902-54020",
+    "email": "academyrkris@gmail.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Plot 21, Knowledge Park, Sector 12",
-      "addressLocality": "Your City",
-      "addressRegion": "State",
-      "postalCode": "201301",
+      "streetAddress": "Motiram Adda, Awadhpur Railway Crossing, Near Pani Tanki, Awadhpur",
+      "addressLocality": "Gorakhpur",
+      "addressRegion": "Uttar Pradesh",
+      "postalCode": "273202",
       "addressCountry": "IN"
     }
   }
@@ -42,7 +42,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <div id="site-header"></div>
   <main id="main">
-    <h1 class="sr-only">RKris Academy — CBSE school, admissions 2026-27</h1>
+    <h1 class="sr-only">RKris Academy — Awadhpur, Gorakhpur, admissions 2026-27</h1>
     <section class="slider" data-slider aria-roledescription="carousel" aria-label="Campus highlights">
       <div class="slider__track">
         <article class="slider__slide is-active">
@@ -136,13 +136,13 @@
     <section class="section">
       <div class="container split">
         <div class="reveal">
-          <img src="https://placehold.co/640x720/0b3d6e/ffffff?text=Principal" width="640" height="720" alt="Portrait of the Principal, Dr. Meera Sharma" loading="lazy">
+          <img class="principal-photo" src="assets/images/principal.jpg" width="640" height="720" alt="Portrait of the Principal, Ms. Pratima Jaiswal" loading="lazy">
         </div>
         <div class="reveal">
           <p class="section__eyebrow">From the Principal</p>
-          <h2>A message from Dr. Meera Sharma</h2>
+          <h2>A message from <span data-bind="principalName">Ms. Pratima Jaiswal</span></h2>
           <p data-principal-excerpt></p>
-          <p class="signature">— Dr. Meera Sharma, Principal</p>
+          <p class="signature">— <span data-bind="principalName">Ms. Pratima Jaiswal</span>, Principal</p>
           <a class="btn btn--primary" href="about.html#principal">Read More</a>
         </div>
       </div>
@@ -251,7 +251,7 @@
               <label class="form__label" for="home-class">Class applying for</label>
               <select class="form__control" id="home-class" name="class_applying" required>
                 <option value="">Select class</option>
-                <option>Nursery</option><option>KG</option><option>I</option><option>II</option><option>III</option><option>IV</option><option>V</option>
+                <option>Nursery</option><option>KG</option><option>L.K.G</option><option>U.K.G</option><option>I</option><option>II</option><option>III</option><option>IV</option><option>V</option>
                 <option>VI</option><option>VII</option><option>VIII</option><option>IX</option><option>X</option><option>XI</option><option>XII</option>
               </select>
               <span class="form__error"></span>
@@ -259,6 +259,13 @@
             <div class="form__group">
               <label class="form__label" for="home-message">Message</label>
               <textarea class="form__control" id="home-message" name="message" rows="3" required></textarea>
+              <span class="form__error"></span>
+            </div>
+            <div class="form__group">
+              <label class="form__consent" for="home-consent">
+                <input id="home-consent" type="checkbox" name="consent" value="yes" required>
+                <span>I agree that the school may contact me regarding admission updates.</span>
+              </label>
               <span class="form__error"></span>
             </div>
             <button class="btn btn--primary btn--block" type="submit">Submit enquiry</button>

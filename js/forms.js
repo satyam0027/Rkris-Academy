@@ -40,6 +40,13 @@
     let ok = true;
     let firstInvalid = null;
     form.querySelectorAll('[required]').forEach(function (input) {
+      if (input.type === 'checkbox') {
+        if (!input.checked) {
+          ok = fail(input, 'Please tick the box to continue.');
+          if (!firstInvalid) firstInvalid = input;
+        }
+        return;
+      }
       if (!String(input.value || '').trim()) {
         ok = fail(input, 'This field is required.');
         if (!firstInvalid) firstInvalid = input;
@@ -66,7 +73,7 @@
   }
 
   function whatsappFallback(data) {
-    const number = (typeof SITE_INFO !== 'undefined' && SITE_INFO.whatsapp) || '919876543210';
+    const number = (typeof SITE_INFO !== 'undefined' && SITE_INFO.whatsapp) || '918090254020';
     const lines = Object.keys(data).filter(function (k) { return k !== 'website'; }).map(function (k) {
       return k.replace(/_/g, ' ') + ': ' + data[k];
     });

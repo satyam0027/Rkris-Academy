@@ -8,8 +8,8 @@
   <div class="topbar">
     <div class="container topbar__inner">
       <div class="topbar__contact">
-        <a class="topbar__link" data-bind="phone" data-bind-href="phoneHref" href="tel:+919876543210"><i class="fa-solid fa-phone" aria-hidden="true"></i> <span>+91 98765 43210</span></a>
-        <a class="topbar__link" data-bind="email" data-bind-href="mailto" href="mailto:info@rkrisacademy.edu.in"><i class="fa-solid fa-envelope" aria-hidden="true"></i> <span>info@rkrisacademy.edu.in</span></a>
+        <a class="topbar__link" data-bind="phone" data-bind-href="phoneHref" href="tel:+918090254020"><i class="fa-solid fa-phone" aria-hidden="true"></i> <span>+91 80902 54020</span></a>
+        <a class="topbar__link" data-bind="email" data-bind-href="mailto" href="mailto:academyrkris@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> <span>academyrkris@gmail.com</span></a>
       </div>
       <span class="badge badge--open">Admissions Open</span>
       <div class="topbar__right">
@@ -23,7 +23,7 @@
             <li><a href="circulars.html">Circulars</a></li>
             <li><a href="notice-board.html">Events</a></li>
             <li><a href="notice-board.html">Notice Board</a></li>
-            <li><a href="gallery.html#videos">Virtual Tour</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html#career">Career</a></li>
           </ul>
         </div>
@@ -47,10 +47,10 @@
             <ul class="nav__dropdown">
               <li><a href="about.html#history">About School</a></li>
               <li><a href="about.html#vision">Vision &amp; Mission</a></li>
-              <li><a href="about.html#principal">Principal's Message</a></li>
-              <li><a href="about.html#management">Management</a></li>
+              <li><a href="about.html#principal">Principal</a></li>
+              <li><a href="about.html#management">School Management Committee</a></li>
+              <li><a href="about.html#pta">PTA</a></li>
               <li><a href="about.html#affiliation">Affiliation &amp; Board Details</a></li>
-              <li><a href="about.html#certificates">Recognition Certificates</a></li>
             </ul>
           </li>
           <li class="nav__item">
@@ -73,7 +73,6 @@
             <ul class="nav__dropdown">
               <li><a href="admissions.html#process">Admission Process</a></li>
               <li><a href="admissions.html#eligibility">Eligibility</a></li>
-              <li><a href="admissions.html#dates">Important Dates</a></li>
               <li><a href="admissions.html#fees">Fee Structure</a></li>
               <li><a href="admissions.html#enquiry">Enquiry Form</a></li>
               <li><a href="admissions.html#downloads">Downloads</a></li>
@@ -110,10 +109,10 @@
         <ul class="drawer__sub">
           <li><a href="about.html#history">About School</a></li>
           <li><a href="about.html#vision">Vision &amp; Mission</a></li>
-          <li><a href="about.html#principal">Principal's Message</a></li>
-          <li><a href="about.html#management">Management</a></li>
+          <li><a href="about.html#principal">Principal</a></li>
+          <li><a href="about.html#management">School Management Committee</a></li>
+          <li><a href="about.html#pta">PTA</a></li>
           <li><a href="about.html#affiliation">Affiliation &amp; Board Details</a></li>
-          <li><a href="about.html#certificates">Recognition Certificates</a></li>
         </ul>
       </li>
       <li class="drawer__item">
@@ -136,7 +135,6 @@
         <ul class="drawer__sub">
           <li><a href="admissions.html#process">Admission Process</a></li>
           <li><a href="admissions.html#eligibility">Eligibility</a></li>
-          <li><a href="admissions.html#dates">Important Dates</a></li>
           <li><a href="admissions.html#fees">Fee Structure</a></li>
           <li><a href="admissions.html#enquiry">Enquiry Form</a></li>
           <li><a href="admissions.html#downloads">Downloads</a></li>
@@ -166,13 +164,13 @@
         <img src="assets/icons/logo.jpg" width="280" height="120" alt="RKris Academy">
         <span class="logo__text">
           <span class="logo__name">RKris Academy</span>
-          <span class="logo__tag">CBSE Affiliated</span>
+          <span class="logo__tag">Awadhpur, Gorakhpur</span>
         </span>
       </a>
-      <p>An original neighbourhood school community offering CBSE education with sport, arts, coding and a strong pastoral culture.</p>
-      <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> <span data-bind="address">Plot 21, Knowledge Park, Sector 12, Your City, State 201301, India</span></p>
-      <p><i class="fa-solid fa-phone" aria-hidden="true"></i> <a data-bind="phone" data-bind-href="phoneHref" href="tel:+919876543210">+91 98765 43210</a></p>
-      <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a data-bind="email" data-bind-href="mailto" href="mailto:info@rkrisacademy.edu.in">info@rkrisacademy.edu.in</a></p>
+      <p>A school in Awadhpur, Gorakhpur, offering classes from Nursery to Class VIII.</p>
+      <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> <span data-bind="address">RKris Academy, Motiram Adda, Awadhpur Railway Crossing, Near Pani Tanki, Awadhpur, Gorakhpur, Uttar Pradesh 273202, India</span></p>
+      <p><i class="fa-solid fa-phone" aria-hidden="true"></i> <a data-bind="phone" data-bind-href="phoneHref" href="tel:+918090254020">+91 80902 54020</a></p>
+      <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a data-bind="email" data-bind-href="mailto" href="mailto:academyrkris@gmail.com">academyrkris@gmail.com</a></p>
       <div class="topbar__social" data-social-links></div>
     </div>
     <div>
@@ -194,14 +192,14 @@
         <li><a href="admissions.html#process">Admission Process</a></li>
         <li><a href="admissions.html#fees">Fee Structure</a></li>
         <li><a href="admissions.html#enquiry">Enquiry Form</a></li>
-        <li><a href="assets/docs/prospectus.pdf" download>Prospectus</a></li>
+        <li><a href="assets/docs/fee-structure.pdf" download>Fee Structure 2026-27</a></li>
         <li><a href="mandatory-disclosure.html">Mandatory Public Disclosure</a></li>
       </ul>
     </div>
     <div>
       <h3>Facilities</h3>
       <ul class="footer__list" id="footer-facilities"></ul>
-      <p class="footer__map"><a class="btn btn--outline" href="https://www.google.com/maps/search/?api=1&query=Knowledge+Park+India" data-bind-href="mapDirections" target="_blank" rel="noopener">View Map</a></p>
+      <p class="footer__map"><a class="btn btn--outline" href="https://www.google.com/maps/search/?api=1&query=RKris+Academy+Motiram+Adda+Awadhpur+Gorakhpur+273202" data-bind-href="mapDirections" target="_blank" rel="noopener">View Map</a></p>
     </div>
   </div>
   <nav class="container footer__statements" aria-label="Important statements">
@@ -215,18 +213,18 @@
     </ul>
   </nav>
   <div class="container footer__meta">
-    <p>Affiliated to <span data-bind="affiliationBoard">CBSE</span> / Affiliation No. <span data-bind="affiliationNo">XXXXXXX</span></p>
+    <p>Affiliated to <span data-bind="affiliationBoard">CBSE</span> / Affiliation No. <span data-bind="affiliationNo">NA</span></p>
     <p>&copy; <span id="year"></span> RKris Academy. All rights reserved. <a href="mandatory-disclosure.html">Mandatory Public Disclosure</a></p>
   </div>
 </footer>
 <div class="float-stack">
-  <a class="float-btn float-btn--wa" data-whatsapp-link href="https://wa.me/919876543210" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-  <a class="float-btn float-btn--call" data-bind-href="phoneHref" href="tel:+919876543210" aria-label="Call the school"><i class="fa-solid fa-phone"></i></a>
+  <a class="float-btn float-btn--wa" data-whatsapp-link href="https://wa.me/918090254020" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <a class="float-btn float-btn--call" data-bind-href="phoneHref" href="tel:+918090254020" aria-label="Call the school"><i class="fa-solid fa-phone"></i></a>
   <button class="float-btn float-btn--top" type="button" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 </div>
 <nav class="mobile-bar" aria-label="Quick actions">
-  <a data-bind-href="phoneHref" href="tel:+919876543210"><i class="fa-solid fa-phone"></i> Call</a>
-  <a data-whatsapp-link href="https://wa.me/919876543210" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+  <a data-bind-href="phoneHref" href="tel:+918090254020"><i class="fa-solid fa-phone"></i> Call</a>
+  <a data-whatsapp-link href="https://wa.me/918090254020" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
   <a href="admissions.html#enquiry"><i class="fa-solid fa-pen-to-square"></i> Enquire</a>
 </nav>
 </div>`;

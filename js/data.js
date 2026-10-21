@@ -1,36 +1,38 @@
 /**
  * RKris Academy — editable site content
  * ------------------------------------
- * Update this file to change copy, contact details, lists and placeholder media.
- * Image URLs currently use https://placehold.co — replace with local files in /assets/images
- * e.g. 'assets/images/hero-1.jpg'
+ * Values below come from the school's own documents (basic details, fee
+ * structure 2026-27, staff list, SMC and PTA). Invented names, stats and
+ * placeholder media are omitted so those sections stay hidden.
  */
 
 const SITE_INFO = {
   name: 'RKris Academy',
   shortName: 'RKris',
   tagline: 'Nurturing Minds. Building Character. Shaping Futures.',
-  established: 2008,
   session: '2026-27',
-  phone: '+91 98765 43210',
-  phoneHref: 'tel:+919876543210',
-  phone2: '+91 98765 43211',
-  phone2Href: 'tel:+919876543211',
-  email: 'info@rkrisacademy.edu.in',
-  admissionsEmail: 'admissions@rkrisacademy.edu.in',
-  address: 'Plot 21, Knowledge Park, Sector 12, Your City, State 201301, India',
-  whatsapp: '919876543210',
-  whatsappDisplay: '+91 98765 43210',
+  website: 'https://www.rkrisacademy.edu.in',
+  phone: '+91 80902 54020',
+  phoneHref: 'tel:+918090254020',
+  phone2: '+91 80902 54020',
+  phone2Href: 'tel:+918090254020',
+  email: 'academyrkris@gmail.com',
+  admissionsEmail: 'academyrkris@gmail.com',
+  address: 'RKris Academy, Motiram Adda, Awadhpur Railway Crossing, Near Pani Tanki, Awadhpur, Gorakhpur, Uttar Pradesh 273202, India',
+  whatsapp: '918090254020',
+  whatsappDisplay: '+91 80902 54020',
   workingHours: 'Monday – Saturday: 8:00 AM – 4:00 PM',
   officeNote: 'Office remains closed on Sundays and gazetted holidays.',
   affiliationBoard: 'CBSE',
-  affiliationNo: 'XXXXXXX',
-  schoolCode: 'XXXXXX',
-  udise: 'XXXXXXXXXXXXX',
-  principalName: 'Dr. Meera Sharma',
+  affiliationNo: 'NA',
+  schoolCode: 'NA',
+  udise: '09584114022',
+  principalName: 'Ms. Pratima Jaiswal',
   principalTitle: 'Principal',
-  mapEmbed: 'https://maps.google.com/maps?q=Knowledge%20Park%20India&t=&z=14&ie=UTF8&iwloc=&output=embed',
-  mapDirections: 'https://www.google.com/maps/search/?api=1&query=Knowledge+Park+India',
+  principalPhoto: 'assets/images/principal.jpg',
+  principalQualification: 'B.Sc. (Maths & Physics), MCA, B.Ed.',
+  mapEmbed: 'https://maps.google.com/maps?q=Motiram%20Adda%2C%20Awadhpur%20Railway%20Crossing%2C%20Near%20Pani%20Tanki%2C%20Awadhpur%2C%20Gorakhpur%2C%20Uttar%20Pradesh%20273202&t=&z=15&ie=UTF8&iwloc=&output=embed',
+  mapDirections: 'https://www.google.com/maps/search/?api=1&query=RKris+Academy+Motiram+Adda+Awadhpur+Gorakhpur+273202',
   social: {
     facebook: 'https://www.facebook.com/',
     instagram: 'https://www.instagram.com/',
@@ -351,25 +353,63 @@ const FACILITIES = [
 ];
 
 const FACULTY = [
-  { id: 'f1', name: 'Dr. Meera Sharma', designation: 'Principal', qualifications: 'M.A., B.Ed., Ph.D.', subject: 'Educational Leadership', experience: '22 years', department: 'administration', photo: 'https://placehold.co/400x400/0b3d6e/ffffff?text=MS' },
-  { id: 'f2', name: 'Mr. Arvind Patel', designation: 'Vice Principal', qualifications: 'M.Sc., B.Ed.', subject: 'Administration', experience: '18 years', department: 'administration', photo: 'https://placehold.co/400x400/1a5a94/ffffff?text=AP' },
-  { id: 'f3', name: 'Ms. Kavita Rao', designation: 'Pre-Primary Coordinator', qualifications: 'M.A., NTT, B.Ed.', subject: 'Early Years', experience: '14 years', department: 'pre-primary', photo: 'https://placehold.co/400x400/0b3d6e/ffffff?text=KR' },
-  { id: 'f4', name: 'Ms. Anjali Nair', designation: 'Early Years Teacher', qualifications: 'B.A., NTT', subject: 'Pre-Primary', experience: '8 years', department: 'pre-primary', photo: 'https://placehold.co/400x400/1a5a94/ffffff?text=AN' },
-  { id: 'f5', name: 'Mr. Rohan Desai', designation: 'Primary Teacher', qualifications: 'M.Sc., B.Ed.', subject: 'Mathematics', experience: '11 years', department: 'primary', photo: 'https://placehold.co/400x400/0b3d6e/ffffff?text=RD' },
-  { id: 'f6', name: 'Ms. Priya Iyer', designation: 'Primary Teacher', qualifications: 'M.A., B.Ed.', subject: 'English', experience: '9 years', department: 'primary', photo: 'https://placehold.co/400x400/1a5a94/ffffff?text=PI' },
-  { id: 'f7', name: 'Mr. Suresh Menon', designation: 'Middle School Teacher', qualifications: 'M.Sc., B.Ed.', subject: 'Science', experience: '13 years', department: 'middle', photo: 'https://placehold.co/400x400/0b3d6e/ffffff?text=SM' },
-  { id: 'f8', name: 'Ms. Neha Gupta', designation: 'Middle School Teacher', qualifications: 'M.A., B.Ed.', subject: 'Social Science', experience: '10 years', department: 'middle', photo: 'https://placehold.co/400x400/1a5a94/ffffff?text=NG' },
-  { id: 'f9', name: 'Dr. Amit Khanna', designation: 'PGT Physics', qualifications: 'M.Sc., B.Ed., Ph.D.', subject: 'Physics', experience: '16 years', department: 'secondary', photo: 'https://placehold.co/400x400/0b3d6e/ffffff?text=AK' },
-  { id: 'f10', name: 'Ms. Farah Khan', designation: 'PGT English', qualifications: 'M.A., B.Ed.', subject: 'English', experience: '12 years', department: 'secondary', photo: 'https://placehold.co/400x400/1a5a94/ffffff?text=FK' },
-  { id: 'f11', name: 'Mr. Vikram Singh', designation: 'Sports Coach', qualifications: 'M.P.Ed.', subject: 'Physical Education', experience: '15 years', department: 'sports-arts', photo: 'https://placehold.co/400x400/0b3d6e/ffffff?text=VS' },
-  { id: 'f12', name: 'Ms. Lata Krishnan', designation: 'Performing Arts', qualifications: 'M.A. Music', subject: 'Music & Dance', experience: '11 years', department: 'sports-arts', photo: 'https://placehold.co/400x400/1a5a94/ffffff?text=LK' }
+  { id: 'f1', name: 'Ms. Pratima Jaiswal', designation: 'Principal', qualifications: 'B.Sc. (Maths & Physics), MCA, B.Ed.', subject: '', experience: '', department: 'administration', photo: 'assets/images/principal.jpg' },
+  { id: 'f2', name: 'Mr. Sandeep Kumar', designation: 'Teacher', qualifications: 'B.A. (Hindi), B.Ed., PDPET', subject: 'Class V', experience: '', department: 'primary', photo: '' },
+  { id: 'f3', name: 'Mr. Adarsh Dubey', designation: 'Teacher', qualifications: 'BCA, B.Sc.', subject: 'Class IV', experience: '', department: 'primary', photo: '' },
+  { id: 'f4', name: 'Mrs. Mamta Vishwakarma', designation: 'Teacher', qualifications: 'M.A. (English), B.Ed.', subject: 'Class III', experience: '', department: 'primary', photo: '' },
+  { id: 'f5', name: 'Mrs. Ranita Yadav', designation: 'Teacher', qualifications: 'M.A. (Political Science), D.L.Ed.', subject: 'Class II', experience: '', department: 'primary', photo: '' },
+  { id: 'f6', name: 'Ms. Shipra Nishad', designation: 'Teacher', qualifications: 'B.Com.', subject: 'Class I', experience: '', department: 'primary', photo: '' },
+  { id: 'f7', name: 'Ms. Sapna Gupta', designation: 'Physical Education Teacher', qualifications: 'B.A. (Physical Education & Education)', subject: 'Physical Education', experience: '', department: 'sports-arts', photo: '' },
+  { id: 'f8', name: 'Mrs. Arti Jaiswal', designation: 'NTT', qualifications: 'NTT', subject: 'Pre-Primary', experience: '', department: 'pre-primary', photo: '' },
+  { id: 'f9', name: 'Ms. Rekha Rani', designation: 'Administrator', qualifications: 'ANM, B.Sc. (Botany & Zoology)', subject: 'Administration', experience: '', department: 'administration', photo: '' },
+  { id: 'f10', name: 'Mr. Manish Kumar', designation: 'Martial Arts Instructor', qualifications: 'B.A., Martial Art', subject: 'Martial Arts', experience: '', department: 'sports-arts', photo: '' },
+  { id: 'f11', name: 'Mr. Dilip Kumar', designation: 'Teacher', qualifications: 'B.Com, D.L.Ed.', subject: '', experience: '', department: 'primary', photo: '' }
+];
+
+const SMC_MEMBERS = [
+  { name: 'Mrs. Madhuri', designation: 'President' },
+  { name: 'Mr. Rambhavan Maurya', designation: 'Manager' },
+  { name: 'Ms. Pratima Jaiswal', designation: 'Secretary (School Principal)' },
+  { name: 'Mr. Rambhavan Maurya', designation: 'Treasurer' },
+  { name: 'Mr. Sandeep Kumar', designation: 'Member (School Teacher)' },
+  { name: 'Mrs. Mamta Vishwakarma', designation: 'Member (School Teacher)' },
+  { name: 'Mr. Dinesh Yadav', designation: 'Member (Parents Representative)' },
+  { name: 'Mr. Ajeet Kumar', designation: 'Member (Parents Representative)' },
+  { name: 'Mr. Sonu Tiwari', designation: 'Member' },
+  { name: 'Mr. Devendra Kumar', designation: 'Member' },
+  { name: 'Mr. Ranglal', designation: 'Member' },
+  { name: 'Mr. Vivek Kumar', designation: 'Member' }
+];
+
+const PTA_OFFICERS = [
+  { name: 'Ms. Pratima Jaiswal', designation: 'Chairperson (Principal)' },
+  { name: 'Ms. Rekha Rani', designation: 'Administrator' },
+  { name: 'Mr. Sandeep Kumar', designation: 'Secretary (Teacher)' },
+  { name: 'Mrs. Mamta Vishwakarma', designation: 'Joint-Secretary (Teacher)' },
+  { name: 'Mr. Ajay Kumar', designation: 'Joint-Secretary (Parent)' },
+  { name: 'Mr. Dinesh Yadav', designation: 'Joint-Secretary (Parent)' }
+];
+
+const PTA_PARENT_REPS = [
+  { name: 'Mr. Ajay Kumar', designation: 'Class I representative (parent)' },
+  { name: 'Mr. Ranjeet Saxena', designation: 'Class II representative (parent)' },
+  { name: 'Mr. Vinod Chauhan', designation: 'Class III representative (parent)' },
+  { name: 'Mr. Ajeet Kumar', designation: 'Class IV representative (parent)' },
+  { name: 'Mr. Dinesh Yadav', designation: 'Class V representative (parent)' }
+];
+
+const PTA_TEACHER_REPS = [
+  { name: 'Ms. Shipra Nishad', designation: 'Class I representative (teacher)' },
+  { name: 'Mrs. Ranita Yadav', designation: 'Class II representative (teacher)' },
+  { name: 'Mrs. Mamta Vishwakarma', designation: 'Class III representative (teacher)' },
+  { name: 'Mr. Adarsh Dubey', designation: 'Class IV representative (teacher)' },
+  { name: 'Mr. Sandeep Kumar', designation: 'Class V representative (teacher)' }
 ];
 
 const MANAGEMENT = [
-  { name: 'Mr. R. Krishnan', designation: 'Chairperson', photo: 'https://placehold.co/400x480/0b3d6e/ffffff?text=Chairperson', bio: 'Provides strategic direction and oversight for the academy.' },
-  { name: 'Ms. S. Iyer', designation: 'Director', photo: 'https://placehold.co/400x480/1a5a94/ffffff?text=Director', bio: 'Leads academic quality, infrastructure and community partnerships.' },
-  { name: 'Dr. Meera Sharma', designation: 'Principal', photo: 'https://placehold.co/400x480/0a2540/f4b942?text=Principal', bio: 'Heads day-to-day academics, student welfare and staff development.' },
-  { name: 'Mr. Arvind Patel', designation: 'Vice Principal', photo: 'https://placehold.co/400x480/0b3d6e/ffffff?text=Vice+Principal', bio: 'Supports examinations, discipline and parent communication.' }
+  { name: 'Mrs. Madhuri', designation: 'President', photo: '', bio: 'President, School Management Committee.' },
+  { name: 'Mr. Rambhavan Maurya', designation: 'Manager', photo: '', bio: 'Manager and Treasurer, School Management Committee.' },
+  { name: 'Ms. Pratima Jaiswal', designation: 'Principal', photo: 'assets/images/principal.jpg', bio: 'Principal and Secretary of the School Management Committee.' }
 ];
 
 const CERTIFICATES = [
@@ -468,126 +508,98 @@ const AWARDS = [
 ];
 
 const FEE_STRUCTURE = [
-  { classGroup: 'Nursery – KG', admission: '25,000', tuition: '6,800 / month', annual: '18,000', transport: 'Optional' },
-  { classGroup: 'I – II', admission: '25,000', tuition: '7,200 / month', annual: '19,500', transport: 'Optional' },
-  { classGroup: 'III – V', admission: '28,000', tuition: '7,800 / month', annual: '21,000', transport: 'Optional' },
-  { classGroup: 'VI – VIII', admission: '30,000', tuition: '8,400 / month', annual: '22,500', transport: 'Optional' },
-  { classGroup: 'IX – X', admission: '32,000', tuition: '9,200 / month', annual: '24,000', transport: 'Optional' },
-  { classGroup: 'XI – XII', admission: '35,000', tuition: '10,500 / month', annual: '26,000', transport: 'Optional' }
+  { className: 'Nursery', registration: '500', admission: '1,000', annual: '1,500', quarterly: '1,800', monthly: '600', yearlyTuition: '7,200', total: '10,200' },
+  { className: 'L.K.G', registration: '500', admission: '1,000', annual: '1,500', quarterly: '1,800', monthly: '600', yearlyTuition: '7,200', total: '10,200' },
+  { className: 'U.K.G', registration: '500', admission: '1,000', annual: '1,500', quarterly: '1,800', monthly: '600', yearlyTuition: '7,200', total: '10,200' },
+  { className: 'I', registration: '500', admission: '1,000', annual: '1,500', quarterly: '2,400', monthly: '800', yearlyTuition: '9,600', total: '12,600' },
+  { className: 'II', registration: '500', admission: '1,000', annual: '1,500', quarterly: '2,400', monthly: '800', yearlyTuition: '9,600', total: '12,600' },
+  { className: 'III', registration: '500', admission: '1,000', annual: '1,500', quarterly: '2,400', monthly: '800', yearlyTuition: '9,600', total: '12,600' },
+  { className: 'IV', registration: '500', admission: '1,000', annual: '1,600', quarterly: '3,150', monthly: '1,050', yearlyTuition: '12,600', total: '15,700' },
+  { className: 'V', registration: '500', admission: '1,000', annual: '1,600', quarterly: '3,150', monthly: '1,050', yearlyTuition: '12,600', total: '15,700' },
+  { className: 'VI', registration: '500', admission: '1,000', annual: '1,600', quarterly: '3,150', monthly: '1,050', yearlyTuition: '12,600', total: '15,700' },
+  { className: 'VII', registration: '500', admission: '1,000', annual: '1,600', quarterly: '3,300', monthly: '1,100', yearlyTuition: '13,200', total: '16,300' },
+  { className: 'VIII', registration: '500', admission: '1,000', annual: '1,600', quarterly: '3,300', monthly: '1,100', yearlyTuition: '13,200', total: '16,300' }
 ];
 
-const IMPORTANT_DATES = [
-  { label: 'Registration opens', date: '1 November 2025' },
-  { label: 'Last date for registration', date: '31 January 2026' },
-  { label: 'Interaction / observation', date: 'February 2026 (by appointment)' },
-  { label: 'Result / offer of admission', date: 'Within 7 working days of interaction' },
-  { label: 'Fee payment for confirmation', date: 'Within 10 days of offer letter' },
-  { label: 'Session begins', date: '2 April 2026' }
-];
+const IMPORTANT_DATES = [];
 
 const ELIGIBILITY = [
-  { className: 'Nursery', age: '3+ years as on 31 March 2026' },
-  { className: 'KG', age: '4+ years as on 31 March 2026' },
-  { className: 'Class I', age: '5+ years as on 31 March 2026' },
-  { className: 'Class II–XII', age: 'As per CBSE age-appropriate norms and previous-class pass certificate' }
+  { className: 'Nursery', age: 'As per school norms' },
+  { className: 'L.K.G', age: 'As per school norms' },
+  { className: 'U.K.G', age: 'As per school norms' },
+  { className: 'Class I', age: 'As per school norms' },
+  { className: 'Class II–VIII', age: 'Previous-class pass certificate / transfer certificate' }
 ];
 
 const CLASSES_OFFERED = [
-  { stage: 'Pre-Primary', classes: 'Nursery, KG', age: '3–5 years' },
-  { stage: 'Primary', classes: 'I – V', age: '6–10 years' },
-  { stage: 'Middle', classes: 'VI – VIII', age: '11–13 years' },
-  { stage: 'Secondary', classes: 'IX – X', age: '14–15 years' },
-  { stage: 'Senior Secondary', classes: 'XI – XII', age: '16–17 years' }
+  { stage: 'Pre-Primary', classes: 'Nursery, L.K.G, U.K.G' },
+  { stage: 'Primary', classes: 'I – V' },
+  { stage: 'Middle', classes: 'VI – VIII' }
 ];
 
 const SUBJECTS_BY_STAGE = [
-  { stage: 'Pre-Primary', subjects: ['Language readiness (English & Hindi)', 'Number readiness', 'Environmental awareness', 'Art, music and movement', 'Play-based social skills'] },
-  { stage: 'Primary', subjects: ['English', 'Hindi', 'Mathematics', 'Environmental Studies / Science', 'Social Science (from Class III)', 'Computer Science', 'Art, Music, PE'] },
-  { stage: 'Middle', subjects: ['English', 'Hindi', 'Mathematics', 'Science', 'Social Science', 'Computer Science / Coding', 'Third language options', 'Art, Music, PE'] },
-  { stage: 'Secondary', subjects: ['English', 'Hindi / Sanskrit', 'Mathematics', 'Science', 'Social Science', 'Computer Applications (optional as offered)', 'Work Education, Art, PE'] },
-  { stage: 'Senior Secondary', subjects: ['Science stream: Physics, Chemistry, Maths / Biology, English, optional CS / PE', 'Commerce stream: Accountancy, Business Studies, Economics, English, optional Maths / CS', 'Humanities stream: History, Political Science, Economics / Psychology, English, optional subjects as offered'] }
+  { stage: 'Pre-Primary', subjects: ['Language readiness (English and Hindi)', 'Number readiness', 'Environmental awareness', 'Art, music and movement'] },
+  { stage: 'Primary', subjects: ['English', 'Hindi', 'Mathematics', 'Environmental Studies / Science', 'Social Science', 'Computer', 'Art, Music, Physical Education'] },
+  { stage: 'Middle', subjects: ['English', 'Hindi', 'Mathematics', 'Science', 'Social Science', 'Computer', 'Art, Music, Physical Education'] }
 ];
 
-const ACADEMIC_CALENDAR = [
-  { month: 'April 2026', events: 'New session, orientation, baseline assessments' },
-  { month: 'May 2026', events: 'Periodic assessments, house activities, summer break begins (as notified)' },
-  { month: 'June 2026', events: 'Summer break / limited support classes (as notified)' },
-  { month: 'July 2026', events: 'School reopens, Term 1 teaching, clubs resume' },
-  { month: 'August 2026', events: 'Independence Day, Periodic Test 2' },
-  { month: 'September 2026', events: 'Half-yearly examinations, Teacher’s Day' },
-  { month: 'October 2026', events: 'Term 2 begins, festival breaks as per holiday list' },
-  { month: 'November 2026', events: 'Children’s Day, sports trials, Periodic Test 3' },
-  { month: 'December 2026', events: 'Annual day / winter carnival, winter break' },
-  { month: 'January 2027', events: 'School reopens, pre-board for X/XII, Republic Day' },
-  { month: 'February 2027', events: 'Annual examinations for I–IX & XI, board practicals' },
-  { month: 'March 2027', events: 'Board examinations, result processing, session close' }
-];
+const ACADEMIC_CALENDAR = [];
 
-const HISTORY_TIMELINE = [
-  { year: '2008', text: 'RKris Academy is founded with a junior wing and a clear brief: rigorous academics with room for childhood.' },
-  { year: '2012', text: 'Senior secondary section opens with Science and Commerce streams.' },
-  { year: '2016', text: 'Sports complex and performing-arts studio are added to the campus.' },
-  { year: '2020', text: 'Digital classrooms and a structured online-support programme are introduced.' },
-  { year: '2024', text: 'Wellness programme and coding curriculum are expanded across middle and secondary school.' },
-  { year: '2026', text: 'Admissions open for the 2026-27 session with continued focus on holistic growth.' }
-];
+const HISTORY_TIMELINE = [];
 
 const PRINCIPAL_MESSAGE = {
   excerpt: 'At RKris Academy we measure success not only by examination results, but by the curiosity, kindness and resilience our students carry into the world.',
-  full: 'Dear parents and students,\n\nWelcome to RKris Academy. We are a school that takes academics seriously and childhood equally so. Our teachers plan lessons that ask students to think, make, question and practise — and our weekly doubt-clearing culture is there so no child is left guessing in silence.\n\nAlongside the CBSE curriculum we run sport, arts, coding and life-skills programmes because confidence is built in many rooms, not only the examination hall. We expect courtesy, honesty and effort. In return, students can expect adults who know their name and notice when they need help.\n\nIf you are considering RKris Academy for 2026-27, I invite you to walk the campus, speak with us, and see whether our pace and values feel like home.\n\nWith warm regards,\nDr. Meera Sharma\nPrincipal'
+  full: 'Dear parents and students,\n\nWelcome to RKris Academy. We are a school that takes academics seriously and childhood equally so. Our teachers plan lessons that ask students to think, make, question and practise — and our weekly doubt-clearing culture is there so no child is left guessing in silence.\n\nAlongside the CBSE curriculum we run sport, arts, coding and life-skills programmes because confidence is built in many rooms, not only the examination hall. We expect courtesy, honesty and effort. In return, students can expect adults who know their name and notice when they need help.\n\nIf you are considering RKris Academy for 2026-27, I invite you to walk the campus, speak with us, and see whether our pace and values feel like home.\n\nWith warm regards,\nMs. Pratima Jaiswal\nPrincipal'
 };
 
 const DISCLOSURE = {
   general: [
     { label: 'Name of the School', value: 'RKris Academy' },
-    { label: 'Affiliation No.', value: 'XXXXXXX' },
-    { label: 'School Code', value: 'XXXXXX' },
-    { label: 'Complete Address', value: 'Plot 21, Knowledge Park, Sector 12, Your City, State 201301' },
-    { label: 'Principal Name & Qualification', value: 'Dr. Meera Sharma, M.A., B.Ed., Ph.D.' },
-    { label: 'School Email', value: 'info@rkrisacademy.edu.in' },
-    { label: 'Contact Numbers', value: '+91 98765 43210 / +91 98765 43211' }
+    { label: 'Affiliation No.', value: 'NA' },
+    { label: 'School Code', value: 'NA' },
+    { label: 'Complete Address', value: 'Motiram Adda, Awadhpur Railway Crossing, Near Pani Tanki, Awadhpur, Gorakhpur, Uttar Pradesh 273202' },
+    { label: 'Principal Name & Qualification', value: 'Ms. Pratima Jaiswal, B.Sc. (Maths & Physics), MCA, B.Ed.' },
+    { label: 'School Email', value: 'academyrkris@gmail.com' },
+    { label: 'Contact Numbers', value: '+91 80902 54020' }
   ],
   documents: [
-    { label: 'Copies of Affiliation / Upgradation Letter', file: 'assets/docs/prospectus.pdf' },
-    { label: 'Copies of Societies / Trust / Company Registration', file: 'assets/docs/prospectus.pdf' },
-    { label: 'Copy of No Objection Certificate (NOC)', file: 'assets/docs/prospectus.pdf' },
-    { label: 'Copies of Recognition Certificate under RTE Act, 2009', file: 'assets/docs/prospectus.pdf' },
-    { label: 'Copy of Valid Building Safety Certificate', file: 'assets/docs/prospectus.pdf' },
-    { label: 'Copy of Valid Fire Safety Certificate', file: 'assets/docs/prospectus.pdf' },
-    { label: 'Copy of the DEO Certificate', file: 'assets/docs/prospectus.pdf' },
-    { label: 'Copies of Valid Water, Health and Sanitation Certificates', file: 'assets/docs/prospectus.pdf' }
+    { label: 'Copies of Affiliation / Upgradation Letter', file: '' },
+    { label: 'Copies of Societies / Trust / Company Registration', file: '' },
+    { label: 'Copy of No Objection Certificate (NOC)', file: '' },
+    { label: 'Copies of Recognition Certificate under RTE Act, 2009', file: '' },
+    { label: 'Copy of Valid Building Safety Certificate', file: '' },
+    { label: 'Copy of Valid Fire Safety Certificate', file: '' },
+    { label: 'Copy of the DEO Certificate', file: '' },
+    { label: 'Copies of Valid Water, Health and Sanitation Certificates', file: '' }
   ],
   results: [
     { label: 'Fee Structure of the School', file: 'assets/docs/fee-structure.pdf' },
-    { label: 'Annual Academic Calendar', file: 'assets/docs/prospectus.pdf' },
-    { label: 'List of School Management Committee (SMC)', file: 'assets/docs/prospectus.pdf' },
-    { label: 'List of Parents Teachers Association (PTA) Members', file: 'assets/docs/prospectus.pdf' },
-    { label: 'Last Three-Year Board Result (Class X / XII)', file: 'assets/docs/prospectus.pdf' }
+    { label: 'Annual Academic Calendar', file: '' },
+    { label: 'List of School Management Committee (SMC)', file: 'assets/disclosure/smc-list.pdf' },
+    { label: 'List of Parents Teachers Association (PTA) Members', file: 'assets/disclosure/pta-members.pdf' },
+    { label: 'Last Three-Year Board Result (Class X / XII)', file: '' }
   ],
   staff: [
     { label: 'Principal', value: '1' },
-    { label: 'Total No. of Teachers', value: '140' },
-    { label: 'PGT', value: '28' },
-    { label: 'TGT', value: '52' },
-    { label: 'PRT', value: '48' },
-    { label: 'Teachers Section Ratio', value: '1 : 1.5 (placeholder)' },
-    { label: 'Details of Special Educator', value: 'Available (placeholder name)' },
-    { label: 'Details of Counsellor and Wellness Teacher', value: 'Available (placeholder name)' }
+    { label: 'Total No. of Teachers', value: '9' },
+    { label: 'PGT', value: 'NA' },
+    { label: 'TGT', value: 'NA' },
+    { label: 'PRT', value: 'NA' },
+    { label: 'Teachers Section Ratio', value: 'NA' },
+    { label: 'Details of Special Educator', value: 'NA' },
+    { label: 'Details of Counsellor and Wellness Teacher', value: 'NA' }
   ],
   infrastructure: [
-    { label: 'Total Campus Area (sq. mtr.)', value: 'XXXXX' },
-    { label: 'No. and Size of Class Rooms', value: 'XX rooms / XX sq. mtr. each' },
-    { label: 'No. and Size of Laboratories including Computer Labs', value: 'X labs / XX sq. mtr.' },
-    { label: 'Internet Facility', value: 'Yes' },
-    { label: 'No. of Girls Toilets', value: 'XX' },
-    { label: 'No. of Boys Toilets', value: 'XX' },
-    { label: 'Link to YouTube video of school inspection', value: 'To be updated' }
+    { label: 'Total Campus Area (sq. mtr.)', value: 'NA' },
+    { label: 'No. and Size of Class Rooms', value: 'NA' },
+    { label: 'No. and Size of Laboratories including Computer Labs', value: 'NA' },
+    { label: 'Internet Facility', value: 'NA' },
+    { label: 'No. of Girls Toilets', value: 'NA' },
+    { label: 'No. of Boys Toilets', value: 'NA' },
+    { label: 'Link to YouTube video of school inspection', value: 'To be uploaded' }
   ]
 };
 
 const DOWNLOADS = [
-  { title: 'Prospectus', file: 'assets/docs/prospectus.pdf', icon: 'fa-book-open' },
-  { title: 'Admission Form', file: 'assets/docs/admission-form.pdf', icon: 'fa-file-lines' },
-  { title: 'Fee Structure', file: 'assets/docs/fee-structure.pdf', icon: 'fa-indian-rupee-sign' },
-  { title: 'Transfer Certificate Format', file: 'assets/docs/admission-form.pdf', icon: 'fa-file-export' }
+  { title: 'Fee Structure 2026-27', file: 'assets/docs/fee-structure.pdf', icon: 'fa-indian-rupee-sign' }
 ];

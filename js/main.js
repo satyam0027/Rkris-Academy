@@ -43,16 +43,18 @@
     const wa = 'https://wa.me/' + SITE_INFO.whatsapp;
     qsa('[data-whatsapp-link]', root).forEach(function (el) { el.setAttribute('href', wa); });
     qsa('[data-social-links]', root).forEach(function (el) {
-      const s = SITE_INFO.social;
-      el.innerHTML = [
+      const s = SITE_INFO.social || {};
+      const links = [
         ['facebook', 'fa-brands fa-facebook-f', s.facebook],
         ['instagram', 'fa-brands fa-instagram', s.instagram],
         ['youtube', 'fa-brands fa-youtube', s.youtube],
         ['twitter', 'fa-brands fa-x-twitter', s.twitter],
         ['linkedin', 'fa-brands fa-linkedin-in', s.linkedin]
-      ].map(function (item) {
+      ].filter(function (item) { return item[2]; });
+      el.innerHTML = links.map(function (item) {
         return '<a href="' + item[2] + '" target="_blank" rel="noopener" aria-label="' + item[0] + '"><i class="' + item[1] + '"></i></a>';
       }).join('');
+      if (!links.length) el.hidden = true;
     });
     const year = qs('#year', root);
     if (year) year.textContent = new Date().getFullYear();
@@ -325,6 +327,50 @@
     });
   }
 
+  function personInitials(name) {
+    return String(name || '')
+      .replace(/^(Ms\.|Mrs\.|Mr\.|Dr\.)\s+/i, '')
+      .split(/\s+/)
+      .filter(Boolean)
+      .slice(0, 2)
+      .map(function (w) { return w.charAt(0); })
+      .join('')
+      .toUpperCase();
+  }
+
+  function personMedia(name, photo, extraClass) {
+    if (photo) {
+      return '<img class="card__image" src="' + photo + '" width="400" height="400" alt="' + name + '" loading="lazy">';
+    }
+    return '<div class="faculty-initials' + (extraClass ? ' ' + extraClass : '') + '" aria-hidden="true">' + personInitials(name) + '</div>';
+  }
+
+  function hideWhenEmpty(selector, empty, hideSection) {
+    if (!empty) return;
+    const node = qs(selector);
+    if (!node) return;
+    node.hidden = true;
+    const wrap = node.closest('.table-wrap');
+    if (wrap) wrap.hidden = true;
+    if (!hideSection) return;
+    const section = node.closest('section');
+    if (!section) return;
+    section.hidden = true;
+    const id = section.id;
+    if (id) {
+      qsa('.subnav a[href="#' + id + '"]').forEach(function (a) {
+        const li = a.closest('li');
+        if (li) li.hidden = true;
+      });
+    }
+  }
+
+  function nameTable(list) {
+    return (list || []).map(function (row) {
+      return '<tr><td>' + row.name + '</td><td>' + row.designation + '</td></tr>';
+    }).join('');
+  }
+
   function initFilterButtons(container, onChange) {
     if (!container) return;
     qsa('[data-filter]', container).forEach(function (btn) {
@@ -422,20 +468,30 @@
         return '<div class="timeline__item"><div class="timeline__year">' + h.year + '</div><p>' + h.text + '</p></div>';
       }).join('');
     }
+    hideWhenEmpty('[data-timeline]', !HISTORY_TIMELINE.length, false);
     const msg = qs('[data-principal-full]');
     if (msg) msg.innerHTML = PRINCIPAL_MESSAGE.full.split('\n\n').map(function (p) { return '<p>' + p.replace(/\n/g, '<br>') + '</p>'; }).join('');
     const mg = qs('[data-management]');
     if (mg) {
       mg.innerHTML = MANAGEMENT.map(function (m) {
-        return '<article class="card"><img class="card__image" src="' + m.photo + '" width="400" height="480" alt="' + m.name + '" loading="lazy"><div class="card__body"><h3 class="card__title">' + m.name + '</h3><p class="section__eyebrow">' + m.designation + '</p><p class="card__text">' + m.bio + '</p></div></article>';
+        return '<article class="card">' + personMedia(m.name, m.photo) + '<div class="card__body"><h3 class="card__title">' + m.name + '</h3><p class="section__eyebrow">' + m.designation + '</p><p class="card__text">' + m.bio + '</p></div></article>';
       }).join('');
     }
+    const smc = qs('[data-smc-table]');
+    if (smc) smc.innerHTML = nameTable(typeof SMC_MEMBERS !== 'undefined' ? SMC_MEMBERS : []);
+    const ptaOff = qs('[data-pta-officers]');
+    if (ptaOff) ptaOff.innerHTML = nameTable(typeof PTA_OFFICERS !== 'undefined' ? PTA_OFFICERS : []);
+    const ptaPar = qs('[data-pta-parents]');
+    if (ptaPar) ptaPar.innerHTML = nameTable(typeof PTA_PARENT_REPS !== 'undefined' ? PTA_PARENT_REPS : []);
+    const ptaTea = qs('[data-pta-teachers]');
+    if (ptaTea) ptaTea.innerHTML = nameTable(typeof PTA_TEACHER_REPS !== 'undefined' ? PTA_TEACHER_REPS : []);
     const certs = qs('[data-certificates]');
     if (certs) {
       certs.innerHTML = CERTIFICATES.map(function (c, i) {
         return '<article class="card"><a href="' + c.image + '" class="js-lightbox" data-index="' + i + '"><img class="card__image" src="' + c.image + '" width="600" height="800" alt="' + c.title + '" loading="lazy"></a><div class="card__body"><h3 class="card__title">' + c.title + '</h3><a class="btn btn--outline btn--sm" href="' + c.file + '" download>Download</a></div></article>';
       }).join('');
     }
+    hideWhenEmpty('[data-certificates]', !CERTIFICATES.length, true);
     qsa('[data-site-field]').forEach(function (el) {
       el.textContent = getPath(SITE_INFO, el.dataset.siteField) || el.textContent;
     });
@@ -445,7 +501,7 @@
     const table = qs('[data-classes-table]');
     if (table) {
       table.innerHTML = CLASSES_OFFERED.map(function (r) {
-        return '<tr><td>' + r.stage + '</td><td>' + r.classes + '</td><td>' + r.age + '</td></tr>';
+        return '<tr><td>' + r.stage + '</td><td>' + r.classes + '</td></tr>';
       }).join('');
     }
     const acc = qs('[data-subjects]');
@@ -461,6 +517,7 @@
         return '<tr><td>' + m.month + '</td><td>' + m.events + '</td></tr>';
       }).join('');
     }
+    hideWhenEmpty('[data-academic-calendar]', !ACADEMIC_CALENDAR.length, false);
   }
 
   function renderFaculty() {
@@ -477,7 +534,8 @@
         return okDept && hay.indexOf(q) !== -1;
       });
       grid.innerHTML = list.length ? list.map(function (f) {
-        return '<article class="card"><img class="card__image" src="' + f.photo + '" width="400" height="400" alt="' + f.name + '" loading="lazy"><div class="card__body"><h3 class="card__title">' + f.name + '</h3><p class="section__eyebrow">' + f.designation + '</p><p class="card__text">' + f.qualifications + '<br>' + f.subject + ' · ' + f.experience + '</p></div></article>';
+        const bits = [f.qualifications, f.subject, f.experience].filter(Boolean).join('<br>');
+        return '<article class="card">' + personMedia(f.name, f.photo) + '<div class="card__body"><h3 class="card__title">' + f.name + '</h3><p class="section__eyebrow">' + f.designation + '</p><p class="card__text">' + bits + '</p></div></article>';
       }).join('') : '<p class="empty-state">No staff match your search.</p>';
     }
     initFilterButtons(filters, function (value) { dept = value; paint(); });
@@ -515,7 +573,7 @@
     const fees = qs('[data-fee-table]');
     if (fees) {
       fees.innerHTML = FEE_STRUCTURE.map(function (r) {
-        return '<tr><td>' + r.classGroup + '</td><td>' + r.admission + '</td><td>' + r.tuition + '</td><td>' + r.annual + '</td><td>' + r.transport + '</td></tr>';
+        return '<tr><td>' + r.className + '</td><td>' + r.registration + '</td><td>' + r.admission + '</td><td>' + r.annual + '</td><td>' + r.quarterly + '</td><td>' + r.monthly + '</td><td>' + r.yearlyTuition + '</td><td>' + r.total + '</td></tr>';
       }).join('');
     }
     const dates = qs('[data-dates]');
@@ -524,6 +582,7 @@
         return '<tr><td>' + d.label + '</td><td>' + d.date + '</td></tr>';
       }).join('');
     }
+    hideWhenEmpty('[data-dates]', !IMPORTANT_DATES.length, true);
     const elig = qs('[data-eligibility]');
     if (elig) {
       elig.innerHTML = ELIGIBILITY.map(function (r) {
@@ -576,7 +635,12 @@
   function renderDisclosure() {
     function rows(items, isFile) {
       return items.map(function (r) {
-        if (isFile) return '<tr><td>' + r.label + '</td><td><a class="btn btn--outline btn--sm" href="' + r.file + '" target="_blank" rel="noopener">View / Download</a></td></tr>';
+        if (isFile) {
+          const cell = r.file
+            ? '<a class="btn btn--outline btn--sm" href="' + r.file + '" target="_blank" rel="noopener">View / Download</a>'
+            : '<span class="disclosure-pending">To be uploaded</span>';
+          return '<tr><td>' + r.label + '</td><td>' + cell + '</td></tr>';
+        }
         return '<tr><td>' + r.label + '</td><td>' + r.value + '</td></tr>';
       }).join('');
     }

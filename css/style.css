@@ -252,6 +252,19 @@ p:last-child { margin-bottom: 0; }
   background: var(--color-primary-light);
 }
 
+.faculty-initials {
+  aspect-ratio: 1;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(160deg, var(--color-primary) 0%, #1a5a94 100%);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
 .card__body { padding: 1.1rem 1.15rem 1.25rem; flex: 1; display: flex; flex-direction: column; }
 .card__title { margin-bottom: 0.35rem; font-size: 1.05rem; }
 .card__text { color: var(--color-text-muted); font-size: 0.95rem; flex: 1; }
@@ -308,6 +321,23 @@ table.data-table {
 .form__error { display: none; color: var(--color-error); font-size: 0.82rem; margin-top: 0.25rem; }
 .form__group.is-invalid .form__error { display: block; }
 .form__group.is-invalid .form__control { border-color: var(--color-error); }
+.form__consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  cursor: pointer;
+  color: var(--color-text);
+}
+.form__consent input[type="checkbox"] {
+  margin-top: 0.2rem;
+  width: 1.05rem;
+  height: 1.05rem;
+  flex-shrink: 0;
+  accent-color: var(--color-primary);
+}
+.form__group.is-invalid .form__consent { color: var(--color-error); }
 
 .form__control {
   width: 100%;
@@ -818,6 +848,11 @@ table.data-table {
 
 .media-block img,
 .split img { border-radius: var(--radius-lg); width: 100%; margin-bottom: 1rem; }
+.principal-photo {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 15%;
+}
 .signature { font-family: var(--font-heading); font-style: italic; color: var(--color-primary); }
 
 .facts {

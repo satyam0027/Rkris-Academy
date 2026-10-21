@@ -33,6 +33,12 @@
     return document.getElementById(id);
   }
 
+  function nameRows(list) {
+    return (list || []).map(function (s) {
+      return '<tr><td>' + esc(s.name) + '</td><td>' + esc(s.designation) + '</td></tr>';
+    }).join('');
+  }
+
   /* ----- A. General Information ---------------------------------------- */
 
   function renderGeneral(data) {
@@ -79,6 +85,12 @@
     body.innerHTML = rows.map(function (r) {
       return '<tr><td>' + esc(r.year) + '</td><td>' + esc(r.registered) + '</td><td>' + esc(r.passed) + '</td><td>' + esc(r.passPercent) + '</td><td>' + pdfLink(r.pdf, 'View') + '</td></tr>';
     }).join('');
+  }
+
+  function renderNamedTable(tbodyId, list) {
+    var body = el(tbodyId);
+    if (!body) return;
+    body.innerHTML = nameRows(list);
   }
 
   /* ----- D. Staff (Teaching) ------------------------------------------- */
@@ -155,6 +167,10 @@
     renderResultDocs(DISCLOSURE_DATA.results.documents);
     renderBoardTable('mpd-class10-body', DISCLOSURE_DATA.results.class10);
     renderBoardTable('mpd-class12-body', DISCLOSURE_DATA.results.class12);
+    renderNamedTable('mpd-smc-body', DISCLOSURE_DATA.results.smc);
+    renderNamedTable('mpd-pta-officers-body', DISCLOSURE_DATA.results.ptaOfficers);
+    renderNamedTable('mpd-pta-parents-body', DISCLOSURE_DATA.results.ptaParentReps);
+    renderNamedTable('mpd-pta-teachers-body', DISCLOSURE_DATA.results.ptaTeacherReps);
     renderStaff(DISCLOSURE_DATA.staff);
     renderInfrastructure(DISCLOSURE_DATA.infrastructure);
   }

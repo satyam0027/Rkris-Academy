@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About RKris Academy | History, Vision and Leadership</title>
-  <meta name="description" content="Learn about RKris Academy: our history, vision and mission, Principal's message, management team, CBSE affiliation details and recognition certificates.">
+  <meta name="description" content="Learn about RKris Academy in Awadhpur, Gorakhpur: Principal Ms. Pratima Jaiswal, the School Management Committee, PTA and board details.">
   <link rel="canonical" href="about.html">
   <meta property="og:title" content="About RKris Academy | History, Vision and Leadership">
   <meta property="og:description" content="History, vision, leadership and affiliation details of RKris Academy.">
-  <meta property="og:image" content="https://placehold.co/1200x630/0b3d6e/ffffff?text=About+RKris">
+  <meta property="og:image" content="assets/images/photo-assembly.jpg">
   <link rel="icon" href="assets/icons/logo.jpg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +40,8 @@
             <li><a href="#history">About School</a></li>
             <li><a href="#vision">Vision &amp; Mission</a></li>
             <li><a href="#principal">Principal's Message</a></li>
-            <li><a href="#management">Management</a></li>
+            <li><a href="#management">School Management Committee</a></li>
+            <li><a href="#pta">PTA</a></li>
             <li><a href="#affiliation">Affiliation &amp; Board</a></li>
             <li><a href="#certificates">Certificates</a></li>
           </ul>
@@ -48,8 +49,9 @@
         <div>
           <section id="history">
             <p class="section__eyebrow">Our story</p>
-            <h2>History</h2>
-            <p>RKris Academy opened in 2008 as a junior school and grew, year by year, into a full K–12 campus. The timeline below is placeholder history — replace years and milestones with your own.</p>
+            <h2>About the school</h2>
+            <p>RKris Academy is in Awadhpur, Gorakhpur, near Motiram Adda, the railway crossing and Pani Tanki. The school offers classes from Nursery to Class VIII.</p>
+            <p>Principal Ms. Pratima Jaiswal leads the school. The office phone and WhatsApp number is +91 80902 54020. Email: academyrkris@gmail.com.</p>
             <div class="timeline" data-timeline></div>
           </section>
 
@@ -66,7 +68,7 @@
               <article class="card">
                 <div class="card__body">
                   <h3 class="card__title">Mission</h3>
-                  <p class="card__text">We deliver the CBSE curriculum through experiential lessons, regular doubt-clearing, sport, arts and life-skills, in a safe campus with open parent communication.</p>
+                  <p class="card__text">We teach classes from Nursery to Class VIII, with room for sport, arts and school activities, and open communication with parents.</p>
                 </div>
               </article>
             </div>
@@ -74,35 +76,67 @@
 
           <section id="principal" class="stack-gap">
             <p class="section__eyebrow">Leadership</p>
-            <h2>Principal's message</h2>
+            <h2>The Principal</h2>
             <div class="split">
-              <img src="https://placehold.co/520x640/0b3d6e/ffffff?text=Principal" width="520" height="640" alt="Dr. Meera Sharma, Principal of RKris Academy" loading="lazy">
+              <img class="principal-photo" src="assets/images/principal.jpg" width="520" height="640" alt="Ms. Pratima Jaiswal, Principal of RKris Academy" loading="lazy">
               <div>
                 <div data-principal-full></div>
-                <p class="signature">Dr. Meera Sharma<br>Principal</p>
+                <p class="signature"><span data-bind="principalName">Ms. Pratima Jaiswal</span><br>Principal</p>
               </div>
             </div>
           </section>
 
           <section id="management" class="stack-gap">
             <p class="section__eyebrow">Governance</p>
-            <h2>Management</h2>
-            <div class="grid grid--4" data-management></div>
+            <h2>School Management Committee</h2>
+            <div class="grid grid--3" data-management></div>
+            <div class="table-wrap stack-gap">
+              <table class="data-table">
+                <caption class="sr-only">School Management Committee members</caption>
+                <thead><tr><th>Name</th><th>Designation</th></tr></thead>
+                <tbody data-smc-table></tbody>
+              </table>
+            </div>
+          </section>
+
+          <section id="pta" class="stack-gap">
+            <p class="section__eyebrow">Parents</p>
+            <h2>Parents Teachers Association</h2>
+            <h3>Office bearers</h3>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th>Name</th><th>Designation</th></tr></thead>
+                <tbody data-pta-officers></tbody>
+              </table>
+            </div>
+            <h3 class="stack-gap">Class representatives (parents)</h3>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th>Name</th><th>Designation</th></tr></thead>
+                <tbody data-pta-parents></tbody>
+              </table>
+            </div>
+            <h3 class="stack-gap">Class representatives (teachers)</h3>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th>Name</th><th>Designation</th></tr></thead>
+                <tbody data-pta-teachers></tbody>
+              </table>
+            </div>
           </section>
 
           <section id="affiliation" class="stack-gap">
             <p class="section__eyebrow">Board</p>
             <h2>Affiliation and board details</h2>
-            <p>Edit these placeholders in <code>js/data.js</code> (SITE_INFO).</p>
             <div class="table-wrap">
               <table class="data-table">
                 <thead><tr><th>Particulars</th><th>Details</th></tr></thead>
                 <tbody>
                   <tr><td>Board</td><td data-site-field="affiliationBoard">CBSE</td></tr>
-                  <tr><td>Affiliation number</td><td data-site-field="affiliationNo">XXXXXXX</td></tr>
-                  <tr><td>School code</td><td data-site-field="schoolCode">XXXXXX</td></tr>
-                  <tr><td>UDISE</td><td data-site-field="udise">XXXXXXXXXXXXX</td></tr>
-                  <tr><td>Classes offered</td><td>Nursery to Class XII</td></tr>
+                  <tr><td>Affiliation number</td><td data-site-field="affiliationNo">NA</td></tr>
+                  <tr><td>School code</td><td data-site-field="schoolCode">NA</td></tr>
+                  <tr><td>UDISE</td><td data-site-field="udise">09584114022</td></tr>
+                  <tr><td>Classes offered</td><td>Nursery to Class VIII</td></tr>
                 </tbody>
               </table>
             </div>
@@ -111,7 +145,7 @@
           <section id="certificates" class="stack-gap">
             <p class="section__eyebrow">Compliance</p>
             <h2>Recognition certificates</h2>
-            <p>Placeholder images — replace with scans of affiliation, safety and recognition documents. Click to preview; use Download for the PDF.</p>
+            <p>Certificate scans will appear here when the school provides them. Affiliation number, NOC, RTE and board results are currently marked NA.</p>
             <div class="grid grid--3" data-certificates></div>
           </section>
         </div>

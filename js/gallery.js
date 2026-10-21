@@ -95,6 +95,10 @@
     const grid = document.querySelector('[data-photo-grid]');
     if (!grid || typeof GALLERY_PHOTOS === 'undefined') return;
     const photos = GALLERY_PHOTOS.filter(function (p) { return filter === 'all' || p.category === filter; });
+    if (!photos.length) {
+      grid.innerHTML = '<p class="empty-state">No photographs in this category yet.</p>';
+      return;
+    }
     grid.innerHTML = photos.map(function (p) {
       return '<a href="' + p.src + '" data-full="' + p.src + '" data-alt="' + p.alt + '"><img src="' + p.thumb + '" width="600" height="460" alt="' + p.alt + '" loading="lazy"></a>';
     }).join('');
@@ -110,6 +114,10 @@
   function renderVideos() {
     const grid = document.querySelector('[data-video-grid]');
     if (!grid || typeof GALLERY_VIDEOS === 'undefined') return;
+    if (!GALLERY_VIDEOS.length) {
+      grid.innerHTML = '<p class="empty-state">Videos will be added when the school shares YouTube links.</p>';
+      return;
+    }
     grid.innerHTML = GALLERY_VIDEOS.map(function (v) {
       return '<button type="button" class="video-card" data-video="' + v.youtubeId + '" data-title="' + v.title + '"><span class="video-card__wrap"><img src="' + v.thumbnail + '" width="640" height="360" alt="' + v.title + '" loading="lazy"><span class="video-card__play" aria-hidden="true"><i class="fa-solid fa-play"></i></span></span><h3>' + v.title + '</h3></button>';
     }).join('');
@@ -157,6 +165,12 @@
     renderVideos();
     const filters = document.querySelector('[data-photo-filters]');
     if (filters) {
+      filters.querySelectorAll('[data-filter]').forEach(function (btn) {
+        const cat = btn.dataset.filter;
+        if (cat !== 'all' && typeof GALLERY_PHOTOS !== 'undefined' && !GALLERY_PHOTOS.some(function (p) { return p.category === cat; })) {
+          btn.hidden = true;
+        }
+      });
       filters.addEventListener('click', function (e) {
         const btn = e.target.closest('[data-filter]');
         if (!btn) return;

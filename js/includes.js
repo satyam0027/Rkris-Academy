@@ -33,7 +33,7 @@
   <div class="header" id="siteHeader">
     <div class="container header__inner">
       <a class="logo" href="index.html" aria-label="RKris Academy home">
-        <img src="assets/icons/logo.jpg" width="280" height="120" alt="RKris Academy">
+        <img src="assets/icons/logo.png" width="114" height="120" alt="RKris Academy">
         <span class="logo__text">
           <span class="logo__name">RKris Academy</span>
           <span class="logo__tag">Excellence with Character</span>
@@ -60,6 +60,7 @@
               <li><a href="academics.html#classes">Classes Offered</a></li>
               <li><a href="academics.html#subjects">Subjects</a></li>
               <li><a href="academics.html#methodology">Teaching Methodology</a></li>
+              <li><a href="academics.html#books">Book List</a></li>
               <li><a href="academics.html#calendar">Academic Calendar</a></li>
             </ul>
           </li>
@@ -122,6 +123,7 @@
           <li><a href="academics.html#classes">Classes Offered</a></li>
           <li><a href="academics.html#subjects">Subjects</a></li>
           <li><a href="academics.html#methodology">Teaching Methodology</a></li>
+          <li><a href="academics.html#books">Book List</a></li>
           <li><a href="academics.html#calendar">Academic Calendar</a></li>
         </ul>
       </li>
@@ -161,7 +163,7 @@
   <div class="container footer__grid">
     <div class="footer__brand">
       <a class="logo" href="index.html">
-        <img src="assets/icons/logo.jpg" width="280" height="120" alt="RKris Academy">
+        <img src="assets/icons/logo.png" width="114" height="120" alt="RKris Academy">
         <span class="logo__text">
           <span class="logo__name">RKris Academy</span>
           <span class="logo__tag">Awadhpur, Gorakhpur</span>

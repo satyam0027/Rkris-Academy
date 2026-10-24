@@ -26,11 +26,11 @@ const DISCLOSURE_DATA = {
   /* B. Documents and Information — 10 rows, CBSE Appendix-IX list */
   documents: [
     { sr: 1, title: 'Copies of Affiliation/Upgradation letter and recent extension of affiliation', pdf: '' },
-    { sr: 2, title: 'Copies of Society/Trust/Company registration and renewal certificate', pdf: '' },
+    { sr: 2, title: 'Copies of Society/Trust/Company registration and renewal certificate', pdf: 'assets/disclosure/society-registration.pdf' },
     { sr: 3, title: 'Copy of No Objection Certificate (NOC) issued by the State Government/UT', pdf: '' },
     { sr: 4, title: 'Copies of Recognition Certificate under RTE Act 2009 and its renewal', pdf: '' },
-    { sr: 5, title: 'Copy of valid Building Safety Certificate as per the National Building Code', pdf: '' },
-    { sr: 6, title: 'Copy of valid Fire Safety Certificate issued by the competent authority', pdf: '' },
+    { sr: 5, title: 'Copy of valid Building Safety Certificate as per the National Building Code', pdf: 'assets/disclosure/building-safety.pdf' },
+    { sr: 6, title: 'Copy of valid Fire Safety Certificate issued by the competent authority', pdf: 'assets/disclosure/fire-safety.pdf' },
     { sr: 7, title: 'Copy of the DEO certificate submitted by the school for affiliation/upgradation/extension, or self-certification', pdf: '' },
     { sr: 8, title: 'Copies of valid Water, Health and Sanitation certificates', pdf: '' },
     { sr: 9, title: 'Self-certification', pdf: '' },
@@ -41,10 +41,11 @@ const DISCLOSURE_DATA = {
   results: {
     documents: [
       { title: 'Fee Structure 2026-27', pdf: 'assets/disclosure/fee-structure-2026-27.pdf' },
+      { title: 'Fees Booklet', pdf: 'assets/disclosure/fees-booklet.pdf' },
       { title: 'Annual Academic Calendar 2026-27', pdf: '' },
       { title: 'School Management Committee (SMC) list', pdf: 'assets/disclosure/smc-list.pdf' },
       { title: 'PTA Members list', pdf: 'assets/disclosure/pta-members.pdf' },
-      { title: 'Prescribed class-wise book list', pdf: '' }
+      { title: 'Prescribed class-wise book list 2026-27', pdf: 'assets/disclosure/book-list.pdf' }
     ],
     class10: [
       { year: 'NA', registered: 'NA', passed: 'NA', passPercent: 'NA', pdf: '' }

@@ -340,7 +340,7 @@
 
   function personMedia(name, photo, extraClass) {
     if (photo) {
-      return '<img class="card__image" src="' + photo + '" width="400" height="400" alt="' + name + '" loading="lazy">';
+      return '<img class="card__image card__image--portrait" src="' + photo + '" width="400" height="500" alt="' + name + '" loading="lazy">';
     }
     return '<div class="faculty-initials' + (extraClass ? ' ' + extraClass : '') + '" aria-hidden="true">' + personInitials(name) + '</div>';
   }
@@ -474,7 +474,7 @@
     const mg = qs('[data-management]');
     if (mg) {
       mg.innerHTML = MANAGEMENT.map(function (m) {
-        return '<article class="card">' + personMedia(m.name, m.photo) + '<div class="card__body"><h3 class="card__title">' + m.name + '</h3><p class="section__eyebrow">' + m.designation + '</p><p class="card__text">' + m.bio + '</p></div></article>';
+        return '<article class="card">' + personMedia(m.name, m.photo, 'faculty-initials--portrait') + '<div class="card__body"><h3 class="card__title">' + m.name + '</h3><p class="section__eyebrow">' + m.designation + '</p><p class="card__text">' + m.bio + '</p></div></article>';
       }).join('');
     }
     const smc = qs('[data-smc-table]');
@@ -488,7 +488,10 @@
     const certs = qs('[data-certificates]');
     if (certs) {
       certs.innerHTML = CERTIFICATES.map(function (c, i) {
-        return '<article class="card"><a href="' + c.image + '" class="js-lightbox" data-index="' + i + '"><img class="card__image" src="' + c.image + '" width="600" height="800" alt="' + c.title + '" loading="lazy"></a><div class="card__body"><h3 class="card__title">' + c.title + '</h3><a class="btn btn--outline btn--sm" href="' + c.file + '" download>Download</a></div></article>';
+        const action = c.file
+          ? '<a class="btn btn--outline btn--sm" href="' + c.file + '" target="_blank" rel="noopener">Download</a>'
+          : '<span class="disclosure-pending">To be uploaded</span>';
+        return '<article class="card"><a href="' + c.image + '" class="js-lightbox" data-index="' + i + '"><img class="card__image" src="' + c.image + '" width="600" height="800" alt="' + c.title + '" loading="lazy"></a><div class="card__body"><h3 class="card__title">' + c.title + '</h3>' + action + '</div></article>';
       }).join('');
     }
     hideWhenEmpty('[data-certificates]', !CERTIFICATES.length, true);
@@ -518,6 +521,16 @@
       }).join('');
     }
     hideWhenEmpty('[data-academic-calendar]', !ACADEMIC_CALENDAR.length, false);
+    const books = qs('[data-book-list]');
+    if (books && typeof BOOK_LIST !== 'undefined') {
+      books.innerHTML = BOOK_LIST.classes.map(function (cls, i) {
+        const id = 'book-' + i;
+        const rows = cls.books.map(function (b, n) {
+          return '<tr><td>' + (n + 1) + '</td><td>' + b.name + '</td><td>' + b.subject + '</td><td>' + b.publication + '</td></tr>';
+        }).join('');
+        return '<div class="accordion__item"><button class="accordion__btn" type="button" aria-expanded="' + (i === 0 ? 'true' : 'false') + '" aria-controls="' + id + '">' + cls.className + ' <i class="fa-solid fa-chevron-down"></i></button><div class="accordion__panel" id="' + id + '"><div class="table-wrap"><table class="data-table"><thead><tr><th>S.No.</th><th>Book name</th><th>Subject</th><th>Publication</th></tr></thead><tbody>' + rows + '</tbody></table></div></div></div>';
+      }).join('');
+    }
   }
 
   function renderFaculty() {
@@ -691,7 +704,6 @@
     initNav();
     initSlider();
     initBackToTop();
-    initAccordion();
     initTabs();
     initSubnavSpy();
 
@@ -705,6 +717,8 @@
     if (page === 'admissions') renderAdmissions();
     if (page === 'notice') renderNotices();
     if (page === 'disclosure') renderDisclosure();
+
+    initAccordion();
 
     initCounters();
     initReveal();

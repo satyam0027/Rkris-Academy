@@ -34,11 +34,11 @@ const SITE_INFO = {
   mapEmbed: 'https://maps.google.com/maps?q=Motiram%20Adda%2C%20Awadhpur%20Railway%20Crossing%2C%20Near%20Pani%20Tanki%2C%20Awadhpur%2C%20Gorakhpur%2C%20Uttar%20Pradesh%20273202&t=&z=15&ie=UTF8&iwloc=&output=embed',
   mapDirections: 'https://www.google.com/maps/search/?api=1&query=RKris+Academy+Motiram+Adda+Awadhpur+Gorakhpur+273202',
   social: {
-    facebook: 'https://www.facebook.com/',
-    instagram: 'https://www.instagram.com/',
-    youtube: 'https://www.youtube.com/',
-    twitter: 'https://twitter.com/',
-    linkedin: 'https://www.linkedin.com/'
+    facebook: 'https://www.facebook.com/profile.php?id=61594003823687',
+    instagram: 'https://www.instagram.com/rkrisacademy/',
+    youtube: 'https://www.youtube.com/@RkrisAcademy',
+    twitter: 'https://x.com/RkrisAcademy',
+    linkedin: 'https://www.linkedin.com/in/rkris-academy-b82b89445'
   }
 };
 
@@ -50,8 +50,8 @@ const KEY_FACTS = [
 ];
 
 const ANNOUNCEMENTS = [
-  { date: '2026-04-02', text: 'Admissions for session 2026-27 are now open for Nursery to Class XI.' },
-  { date: '2026-03-28', text: 'Holiday list for the new academic session has been published under Circulars.' },
+  { date: '2026-04-02', text: 'Admissions for session 2026-27 are now open for Nursery to Class VIII.' },
+  { date: '2026-10-24', text: 'Fee structure and class-wise book list for 2026-27 are available under Admissions and Academics.' },
   { date: '2026-03-20', text: 'Parent orientation for Classes I–V will be held on 10 April 2026.' },
   { date: '2026-03-12', text: 'Inter-house sports trials begin next week. Check the Notice Board for schedules.' },
   { date: '2026-03-05', text: 'Annual day photographs have been added to the Gallery.' }
@@ -409,16 +409,16 @@ const PTA_TEACHER_REPS = [
 const MANAGEMENT = [
   { name: 'Mrs. Madhuri', designation: 'President', photo: '', bio: 'President, School Management Committee.' },
   { name: 'Mr. Rambhavan Maurya', designation: 'Manager', photo: '', bio: 'Manager and Treasurer, School Management Committee.' },
-  { name: 'Ms. Pratima Jaiswal', designation: 'Principal', photo: 'assets/images/principal.jpg', bio: 'Principal and Secretary of the School Management Committee.' }
+  { name: 'Ms. Pratima Jaiswal', designation: 'Principal', photo: 'assets/images/principal.jpg', bio: 'B.Sc. (Maths & Physics), MCA, B.Ed. Principal of RKris Academy and Secretary of the School Management Committee.' }
 ];
 
 const CERTIFICATES = [
-  { title: 'CBSE Affiliation Letter', image: 'https://placehold.co/600x800/f5f7fa/0b3d6e?text=Affiliation', file: 'assets/docs/prospectus.pdf' },
-  { title: 'Society Registration', image: 'https://placehold.co/600x800/f5f7fa/0b3d6e?text=Registration', file: 'assets/docs/prospectus.pdf' },
-  { title: 'Recognition Certificate', image: 'https://placehold.co/600x800/f5f7fa/0b3d6e?text=Recognition', file: 'assets/docs/prospectus.pdf' },
-  { title: 'Fire Safety Certificate', image: 'https://placehold.co/600x800/f5f7fa/0b3d6e?text=Fire+Safety', file: 'assets/docs/prospectus.pdf' },
-  { title: 'Building Safety Certificate', image: 'https://placehold.co/600x800/f5f7fa/0b3d6e?text=Building+Safety', file: 'assets/docs/prospectus.pdf' },
-  { title: 'Water and Sanitation', image: 'https://placehold.co/600x800/f5f7fa/0b3d6e?text=WASH', file: 'assets/docs/prospectus.pdf' }
+  { title: 'CBSE Affiliation Letter', image: 'https://placehold.co/600x800/f5f7fa/0b3d6e?text=Affiliation', file: '' },
+  { title: 'Society Registration', image: 'assets/images/certificates/society-registration.jpg', file: 'assets/disclosure/society-registration.pdf' },
+  { title: 'Recognition Certificate', image: 'https://placehold.co/600x800/f5f7fa/0b3d6e?text=Recognition', file: '' },
+  { title: 'Fire Safety Certificate', image: 'assets/images/certificates/fire-safety.jpg', file: 'assets/disclosure/fire-safety.pdf' },
+  { title: 'Building Safety Certificate', image: 'assets/images/certificates/building-safety.jpg', file: 'assets/disclosure/building-safety.pdf' },
+  { title: 'Water and Sanitation', image: 'https://placehold.co/600x800/f5f7fa/0b3d6e?text=WASH', file: '' }
 ];
 
 const GALLERY_PHOTOS = [
@@ -450,7 +450,7 @@ const GALLERY_VIDEOS = [
 ];
 
 const NOTICES = [
-  { id: 'n1', date: '2026-04-01', title: 'New academic session orientation circular', category: 'notice', excerpt: 'Orientation dates for Nursery to Class XII have been scheduled.' },
+  { id: 'n1', date: '2026-04-01', title: 'New academic session orientation circular', category: 'notice', excerpt: 'Orientation dates for Nursery to Class VIII have been scheduled.' },
   { id: 'n2', date: '2026-03-26', title: 'PTA meeting for Classes VI–VIII', category: 'news', excerpt: 'Parents are invited to the mid-term PTA in the multipurpose hall.' },
   { id: 'n3', date: '2026-03-18', title: 'Inter-house debate registrations open', category: 'event', excerpt: 'Middle and secondary students may register through class teachers.' },
   { id: 'n4', date: '2026-03-10', title: 'Transport route revision from April', category: 'notice', excerpt: 'Updated pickup times will be shared with opted families.' },
@@ -472,6 +472,7 @@ const EVENTS = [
 ];
 
 const CIRCULARS = [
+  { id: 'c-books', title: 'Class-wise Book List 2026-27', date: '2026-04-01', classGroup: 'Junior K.G. – V', category: 'circulars', file: 'assets/docs/book-list.pdf' },
   { id: 'c1', title: 'Academic Session 2026-27 — Opening Circular', date: '2026-03-28', classGroup: 'All', category: 'circulars', file: 'assets/docs/prospectus.pdf' },
   { id: 'c2', title: 'Uniform and Grooming Guidelines', date: '2026-03-22', classGroup: 'All', category: 'circulars', file: 'assets/docs/prospectus.pdf' },
   { id: 'c3', title: 'Fee Payment Schedule — Term 1', date: '2026-03-18', classGroup: 'All', category: 'circulars', file: 'assets/docs/fee-structure.pdf' },
@@ -495,7 +496,7 @@ const TESTIMONIALS = [
   { name: 'Anita Rao', role: 'Parent of Class IV student', quote: 'The teachers know our child well and keep us informed. The campus feels safe, and activity options are genuine, not just listed on a brochure.', photo: 'https://placehold.co/160x160/0b3d6e/ffffff?text=AR' },
   { name: 'Vikram Malhotra', role: 'Parent of Class IX student', quote: 'Doubt-clearing sessions and a calm exam culture have helped our son become more independent. Communication from the school is timely.', photo: 'https://placehold.co/160x160/1a5a94/ffffff?text=VM' },
   { name: 'Sneha Kulkarni', role: 'Parent of Nursery student', quote: 'Settling into pre-primary was smooth. The early-years team is patient, and the classrooms are bright and organised.', photo: 'https://placehold.co/160x160/0a2540/f4b942?text=SK' },
-  { name: 'Imran Qureshi', role: 'Parent of Class XI student', quote: 'Senior school subject teachers are approachable. Sports and clubs continue alongside board preparation, which we value.', photo: 'https://placehold.co/160x160/0b3d6e/ffffff?text=IQ' }
+  { name: 'Imran Qureshi', role: 'Parent of Class VIII student', quote: 'Senior school subject teachers are approachable. Sports and clubs continue alongside board preparation, which we value.', photo: 'https://placehold.co/160x160/0b3d6e/ffffff?text=IQ' }
 ];
 
 const AWARDS = [
@@ -543,6 +544,140 @@ const SUBJECTS_BY_STAGE = [
   { stage: 'Middle', subjects: ['English', 'Hindi', 'Mathematics', 'Science', 'Social Science', 'Computer', 'Art, Music, Physical Education'] }
 ];
 
+const BOOK_LIST = {
+  session: '2026-27',
+  pdf: 'assets/docs/book-list.pdf',
+  classes: [
+    {
+      className: 'Junior K.G.',
+      books: [
+        { name: 'English Skill Book (Part 1) A', subject: 'English', publication: 'Scooby Books' },
+        { name: 'English Skill Book (Part 2) A', subject: 'English', publication: 'Scooby Books' },
+        { name: 'Maths Skill Book (Part 1) A', subject: 'Maths', publication: 'Scooby Books' },
+        { name: 'Maths Skill Book (Part 2) A', subject: 'Maths', publication: 'Scooby Books' },
+        { name: 'Hindi Skill Book (Part 1) A', subject: 'Hindi', publication: 'Scooby Books' },
+        { name: 'Hindi Skill Book (Part 2) A', subject: 'Hindi', publication: 'Scooby Books' },
+        { name: 'Rhymes (English + Hindi) A', subject: 'Rhymes', publication: 'Scooby Books' },
+        { name: 'My Art Skill A', subject: 'Art', publication: 'Scooby Books' },
+        { name: 'English Alphabet A', subject: 'English', publication: 'Scooby Books' },
+        { name: 'Hindi Akshar A', subject: 'Hindi', publication: 'Scooby Books' },
+        { name: 'General Knowledge A', subject: 'G.K.', publication: 'Scooby Books' }
+      ]
+    },
+    {
+      className: 'Senior K.G.',
+      books: [
+        { name: 'English Skill Book (Part 1) C', subject: 'English', publication: 'Scooby Books' },
+        { name: 'English Skill Book (Part 2) C', subject: 'English', publication: 'Scooby Books' },
+        { name: 'Maths Skill Book (Part 1) C', subject: 'Maths', publication: 'Scooby Books' },
+        { name: 'Maths Skill Book (Part 2) C', subject: 'Maths', publication: 'Scooby Books' },
+        { name: 'Hindi Skill Book (Part 1) C', subject: 'Hindi', publication: 'Scooby Books' },
+        { name: 'Hindi Skill Book (Part 2) C', subject: 'Hindi', publication: 'Scooby Books' },
+        { name: 'Rhymes (English + Hindi) C', subject: 'Rhymes', publication: 'Scooby Books' },
+        { name: 'My Art Skill C', subject: 'Art', publication: 'Scooby Books' },
+        { name: 'English Alphabet C', subject: 'English', publication: 'Scooby Books' },
+        { name: 'Hindi Akshar C', subject: 'Hindi', publication: 'Scooby Books' },
+        { name: 'General Knowledge C', subject: 'G.K.', publication: 'Scooby Books' }
+      ]
+    },
+    {
+      className: 'Class I',
+      books: [
+        { name: 'Gateway of English', subject: 'English Literature', publication: 'Jophiel Books' },
+        { name: 'The Grammar Navigator', subject: 'English Grammar', publication: 'Raphael Books' },
+        { name: 'वासंती हिंदी पाठ्यपुस्तक', subject: 'Hindi Literature', publication: 'Jophiel Books' },
+        { name: 'व्याकरण', subject: 'Hindi Grammar', publication: 'Matermind' },
+        { name: 'Integrated Mathematics', subject: 'Mathematics', publication: 'Jophiel Books' },
+        { name: 'The Brain Bridge', subject: 'Science', publication: 'Raphael Books' },
+        { name: 'World Through Social Studies', subject: 'Social Studies', publication: 'Flora' },
+        { name: 'Computer with AI', subject: 'Computer', publication: 'Flora' },
+        { name: 'Know the World', subject: 'General Knowledge', publication: 'Raphael Books' },
+        { name: 'Route to Roots', subject: 'Moral Science', publication: 'Kiddiewink Learning' },
+        { name: 'Walk and Talk', subject: 'English Conversation', publication: 'Ace Publishing House' },
+        { name: 'Cursive Writing', subject: 'English Writing', publication: 'Bright Smart Turners' },
+        { name: 'सुलिपि', subject: 'हिंदी सुलेख', publication: 'Bright Smart Turners' },
+        { name: 'Colour Board', subject: 'Art', publication: 'Penguin' }
+      ]
+    },
+    {
+      className: 'Class II',
+      books: [
+        { name: 'Gateway of English', subject: 'English Literature', publication: 'Jophiel Books' },
+        { name: 'The Grammar Navigator', subject: 'English Grammar', publication: 'Raphael Books' },
+        { name: 'वासंती हिंदी पाठ्यपुस्तक', subject: 'Hindi Literature', publication: 'Jophiel Books' },
+        { name: 'व्याकरण', subject: 'Hindi Grammar', publication: 'Matermind' },
+        { name: 'Integrated Mathematics', subject: 'Mathematics', publication: 'Jophiel Books' },
+        { name: 'The Brain Bridge', subject: 'Science', publication: 'Raphael Books' },
+        { name: 'World Through Social Studies', subject: 'Social Studies', publication: 'Flora' },
+        { name: 'Computer with AI', subject: 'Computer', publication: 'Flora' },
+        { name: 'Know the World', subject: 'General Knowledge', publication: 'Raphael Books' },
+        { name: 'Route to Roots', subject: 'Moral Science', publication: 'Kiddiewink Learning' },
+        { name: 'Walk and Talk', subject: 'English Conversation', publication: 'Ace Publishing House' },
+        { name: 'Cursive Writing', subject: 'English Writing', publication: 'Bright Smart Turners' },
+        { name: 'सुलिपि', subject: 'हिंदी सुलेख', publication: 'Bright Smart Turners' },
+        { name: 'Colour Board', subject: 'Art', publication: 'Penguin' }
+      ]
+    },
+    {
+      className: 'Class III',
+      books: [
+        { name: 'Gateway of English', subject: 'English Literature', publication: 'Jophiel Books' },
+        { name: 'The Grammar Navigator', subject: 'English Grammar', publication: 'Raphael Books' },
+        { name: 'वासंती हिंदी पाठ्यपुस्तक', subject: 'Hindi Literature', publication: 'Jophiel Books' },
+        { name: 'व्याकरण', subject: 'Hindi Grammar', publication: 'Matermind' },
+        { name: 'Integrated Mathematics', subject: 'Mathematics', publication: 'Jophiel Books' },
+        { name: 'The Brain Bridge', subject: 'Science', publication: 'Raphael Books' },
+        { name: 'World Through Social Studies', subject: 'Social Studies', publication: 'Flora' },
+        { name: 'Computer with AI', subject: 'Computer', publication: 'Flora' },
+        { name: 'Know the World', subject: 'General Knowledge', publication: 'Raphael Books' },
+        { name: 'Route to Roots', subject: 'Moral Science', publication: 'Kiddiewink Learning' },
+        { name: 'Walk and Talk', subject: 'English Conversation', publication: 'Ace Publishing House' },
+        { name: 'Cursive Writing', subject: 'English Writing', publication: 'Bright Smart Turners' },
+        { name: 'सुलिपि', subject: 'हिंदी सुलेख', publication: 'Bright Smart Turners' },
+        { name: 'Colour Board', subject: 'Art', publication: 'Penguin' }
+      ]
+    },
+    {
+      className: 'Class IV',
+      books: [
+        { name: 'Gateway of English', subject: 'English Literature', publication: 'Jophiel Books' },
+        { name: 'The Grammar Navigator', subject: 'English Grammar', publication: 'Raphael Books' },
+        { name: 'वासंती हिंदी पाठ्यपुस्तक', subject: 'Hindi Literature', publication: 'Jophiel Books' },
+        { name: 'व्याकरण', subject: 'Hindi Grammar', publication: 'Matermind' },
+        { name: 'Integrated Mathematics', subject: 'Mathematics', publication: 'Jophiel Books' },
+        { name: 'The Brain Bridge', subject: 'Science', publication: 'Raphael Books' },
+        { name: 'World Through Social Studies', subject: 'Social Studies', publication: 'Flora' },
+        { name: 'Computer with AI', subject: 'Computer', publication: 'Flora' },
+        { name: 'Know the World', subject: 'General Knowledge', publication: 'Raphael Books' },
+        { name: 'Route to Roots', subject: 'Moral Science', publication: 'Kiddiewink Learning' },
+        { name: 'Walk and Talk', subject: 'English Conversation', publication: 'Ace Publishing House' },
+        { name: 'Cursive Writing', subject: 'English Writing', publication: 'Bright Smart Turners' },
+        { name: 'सुलिपि', subject: 'हिंदी सुलेख', publication: 'Bright Smart Turners' },
+        { name: 'Colour Board', subject: 'Art', publication: 'Penguin' }
+      ]
+    },
+    {
+      className: 'Class V',
+      books: [
+        { name: 'Gateway of English', subject: 'English Literature', publication: 'Jophiel Books' },
+        { name: 'The Grammar Navigator', subject: 'English Grammar', publication: 'Raphael Books' },
+        { name: 'वासंती हिंदी पाठ्यपुस्तक', subject: 'Hindi Literature', publication: 'Jophiel Books' },
+        { name: 'व्याकरण', subject: 'Hindi Grammar', publication: 'Matermind' },
+        { name: 'Integrated Mathematics', subject: 'Mathematics', publication: 'Jophiel Books' },
+        { name: 'The Brain Bridge', subject: 'Science', publication: 'Raphael Books' },
+        { name: 'World Through Social Studies', subject: 'Social Studies', publication: 'Flora' },
+        { name: 'Computer with AI', subject: 'Computer', publication: 'Flora' },
+        { name: 'Know the World', subject: 'General Knowledge', publication: 'Raphael Books' },
+        { name: 'Route to Roots', subject: 'Moral Science', publication: 'Kiddiewink Learning' },
+        { name: 'Walk and Talk', subject: 'English Conversation', publication: 'Ace Publishing House' },
+        { name: 'Cursive Writing', subject: 'English Writing', publication: 'Bright Smart Turners' },
+        { name: 'सुलिपि', subject: 'हिंदी सुलेख', publication: 'Bright Smart Turners' },
+        { name: 'Colour Board', subject: 'Art', publication: 'Penguin' }
+      ]
+    }
+  ]
+};
+
 const ACADEMIC_CALENDAR = [];
 
 const HISTORY_TIMELINE = [];
@@ -564,19 +699,21 @@ const DISCLOSURE = {
   ],
   documents: [
     { label: 'Copies of Affiliation / Upgradation Letter', file: '' },
-    { label: 'Copies of Societies / Trust / Company Registration', file: '' },
+    { label: 'Copies of Societies / Trust / Company Registration', file: 'assets/disclosure/society-registration.pdf' },
     { label: 'Copy of No Objection Certificate (NOC)', file: '' },
     { label: 'Copies of Recognition Certificate under RTE Act, 2009', file: '' },
-    { label: 'Copy of Valid Building Safety Certificate', file: '' },
-    { label: 'Copy of Valid Fire Safety Certificate', file: '' },
+    { label: 'Copy of Valid Building Safety Certificate', file: 'assets/disclosure/building-safety.pdf' },
+    { label: 'Copy of Valid Fire Safety Certificate', file: 'assets/disclosure/fire-safety.pdf' },
     { label: 'Copy of the DEO Certificate', file: '' },
     { label: 'Copies of Valid Water, Health and Sanitation Certificates', file: '' }
   ],
   results: [
     { label: 'Fee Structure of the School', file: 'assets/docs/fee-structure.pdf' },
+    { label: 'Fees Booklet', file: 'assets/docs/fees-booklet.pdf' },
     { label: 'Annual Academic Calendar', file: '' },
     { label: 'List of School Management Committee (SMC)', file: 'assets/disclosure/smc-list.pdf' },
     { label: 'List of Parents Teachers Association (PTA) Members', file: 'assets/disclosure/pta-members.pdf' },
+    { label: 'Prescribed class-wise book list', file: 'assets/disclosure/book-list.pdf' },
     { label: 'Last Three-Year Board Result (Class X / XII)', file: '' }
   ],
   staff: [
@@ -601,5 +738,7 @@ const DISCLOSURE = {
 };
 
 const DOWNLOADS = [
-  { title: 'Fee Structure 2026-27', file: 'assets/docs/fee-structure.pdf', icon: 'fa-indian-rupee-sign' }
+  { title: 'Fee Structure 2026-27', file: 'assets/docs/fee-structure.pdf', icon: 'fa-indian-rupee-sign' },
+  { title: 'Fees Booklet', file: 'assets/docs/fees-booklet.pdf', icon: 'fa-file-invoice' },
+  { title: 'Book List 2026-27', file: 'assets/docs/book-list.pdf', icon: 'fa-book' }
 ];
